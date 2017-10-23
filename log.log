@@ -1,0 +1,150 @@
+START ON Aug 25, 17 AT 11:26
+
+    Selected Parameters:
+    Signup Period: Fall 2017
+    ServiceGroups: 1,2,3,4,6
+    Divisions    : 1,4
+    Lines        :   2,  5, 10, 11, 12, 15, 16, 27, 28, 32, 39, 45, 48, 49, 51, 52, 55, 57, 60, 62, 63, 64, 65, 80, 84, 88, 90, 91, 94,100,101,102,106,108,114,115,201,202
+    File Format  : XML
+    OutPut Folder: H:\.GTFS Exports\
+    Calculated DH: Yes
+    Supp. Labels : Yes
+    Blockbuster  : Yes
+    Used DH Only : No
+    Used Comments: No
+    Nodes Only   : No
+    Pattern Dest : 
+
+
+Successfully exported file H:\.GTFS Exports\20170825_ver.xml
+
+    Exported 1 schedule version record (7 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_svc.xml
+
+    Exported 5 service records (4 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_cal.xml
+
+    Exported 6 calendar records (19 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_pnt.xml
+
+    Exported 2729 point records (528 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_pta.xml
+
+    Exported 122226 point attribute records (7277 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_lin.xml
+
+    Exported 76 line records (71 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_lnp.xml
+
+    Exported 3637 line point records (4146 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_ptp.xml
+
+    Exported 6940 pattern point records (9526 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_trp.xml
+
+    Exported 565598 trip records (379423 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_blk.xml
+
+    Exported 14925 block records (69519 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_exc.xml
+
+    Exported 0 exception record (5 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_ecb.xml
+
+    Exported 0 exception Combo record (5 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_deh.xml
+
+    Exported 7819 deadHead records (1582 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_trc.xml
+
+    Exported 38557 trace records (20576 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_vet.xml
+
+    Exported 3 vehicle type records (6 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_com.xml
+
+    Exported 10847 comment records (8284 ms)
+
+*E* Fail to load run triptime, skip run 204. (service:4, division:4)
+*E* Fail to load run triptime, skip run 205. (service:4, division:4)
+*E* Fail to load run triptime, skip run 4709. (service:4, division:4)
+*E* Fail to load run triptime, skip run 4712. (service:4, division:4)
+*E* Fail to load run triptime, skip run 4803. (service:4, division:4)
+*E* Fail to load run triptime, skip run 4804. (service:4, division:4)
+*E* Fail to load run triptime, skip run 4805. (service:4, division:4)
+*E* Fail to load run triptime, skip run 4806. (service:4, division:4)
+*E* Fail to load run triptime, skip run 4807. (service:4, division:4)
+*E* Fail to load run triptime, skip run 4808. (service:4, division:4)
+File H:\.GTFS Exports\20170825_run.xml export is not completed successfully
+
+    Exported 1042 run records (3674 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_rua.xml
+
+    Exported 48087 run attribute records (3486 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_ros.xml
+
+    Exported 320 roster records (1209 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_rda.xml
+
+    Exported 1557 roster day records (1027 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_roa.xml
+
+    Exported 1280 roster Attribute records (972 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_pty.xml
+
+    Exported 54 pay type records (7 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_trv.xml
+
+    Exported 600 travel records (606 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_div.xml
+
+    Exported 2 division records (5 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_trn.xml
+
+    Exported 0 transfer record (8 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_lnt.xml
+
+    Exported 16586 line trace records (1269 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_lna.xml
+
+    Exported 190 line attribute records (90 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_pna.xml
+
+    Exported 0 pattern attribute record (2550 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_lpl.xml
+
+    Exported 0 line point label record (103 ms)
+
+Successfully exported file H:\.GTFS Exports\20170825_dgr.xml
+
+    Exported 0 division garage record (9 ms)
+
+END ON Aug 25, 17 AT 11:34
+
