@@ -71,7 +71,7 @@ trial_am <- trial %>%
          tad2 = tf(TIME_ACTUAL_DEPART, SURVEY_DATE),
          id = paste0(ROUTE_NUMBER,"_", SERVICE_PERIOD, "_", TIME_PERIOD, "_", 
                      DIRECTION_NAME,"_", SURVEY_DATE)) %>% #Create a unique ID for reference)
-  group_by(SERIAL_NUMBER) #Create groups within the DF--serial_number is a unique trip  
+  group_by(SERIAL_NUMBER) %>% #Create groups within the DF--serial_number is a unique trip  
   nest()
 
 
@@ -81,7 +81,7 @@ travel_func <- function(x, y, z){
 
 travel_func(trial_am, "taa2", "tad2")
 
-test_map <- modify(trial_am, ~travel_func, y = "taa2", z = "tad2")
+test_map <- map(trial_am, travel_func, y = "taa2", z = "tad2")
 View(table(trial_am$STOP_ID))
 
 #Am attempting to get the actual time difference on here, but have two problems:
