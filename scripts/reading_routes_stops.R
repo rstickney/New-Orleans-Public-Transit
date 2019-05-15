@@ -1,25 +1,25 @@
-setwd("C:\\Users\\rober\\Google Drive\\Ride NOLA\\GTFS Data\\RTA_GTFSDataFeed")
-
 library(data.table)
 library(tidyverse)
 library(tidytransit)
 library(mapview)
 library(sf)
 
-devtools::install_github('ropensci/gtfsr')
-#adapted from: https://rpubs.com/data_feelings/data607_gtfs
-#List all of the files that are contained in the RTA document downloaded
-list.files("RTA Google")
-
-tidytransit::set_api_key()
-#API Key is 84f6f28e-daeb-486e-aeda-05391e02773f
-
-feedlist_df <- get_feedlist() %>%
-  filter(grepl('NORTA GTFS', t, ignore.case= TRUE))
+# devtools::install_github('ropensci/gtfsr')
+# #adapted from: https://rpubs.com/data_feelings/data607_gtfs
+# #List all of the files that are contained in the RTA document downloaded
+# list.files("RTA Google")
+# 
+# tidytransit::set_api_key()
+# #API Key is 84f6f28e-daeb-486e-aeda-05391e02773f
+# 
+# feedlist_df <- get_feedlist() %>%
+#   filter(grepl('NORTA GTFS', t, ignore.case= TRUE))
 
 #Load in the GTFS data for NORTA (is saved in google drive)
-new_orleans <- read_gtfs("C:\\Users\\rober\\Google Drive\\Ride NOLA\\GTFS Data\\RTA_GTFSDataFeed\\2018 - Winter B - G.zip", 
-                         local = TRUE)
+new_orleans <- read_gtfs("data\\2018 - Winter B - G.zip", 
+                         local = TRUE) %>%
+  gtfs_as_sf()
+
 
 nola_sf <- new_orleans %>% 
   gtfs_as_sf()
@@ -45,10 +45,17 @@ class(broad)
 ?st_intersects
 nola_sf[[9]] %>% mapview()
 
-broad <- filter(routes, short_name == "94") 
-rm()
-routes$route_id_check <- new_orleans$routes$route_id
 
+routes$route_id_check <- new_orleans$routes$route_id
+routes$short_name <- new_orleans$routes$route_short_name
+
+broad <- filter(routes, short_name == "94") 
+
+index <- st_buffer(broad, 1, endCapStyle = "FLAT") %>%
+  st_contains(stops)
+
+
+View(index)
 routes <- new_orleans[['routes_df']] 
 new_orleans %>% map_gtfs(route_ids = routes)
 new_orleans %>% map_gtfs()
