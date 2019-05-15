@@ -1,0 +1,473 @@
+Interface Name: GoogleExport
+Service Name: GoogleExport
+
+Export To: H:\.GTFS & TSDE Exports\GTFS Files\2018.01 - Winter - GTFS\2018 - Winter B - I\
+Log File: H:\.GTFS & TSDE Exports\GTFS Files\2018.01 - Winter - GTFS\2018 - Winter B - I\google.log
+
+Format: Delimiter
+Delimiter: ,
+Qualifier: "
+
+Selected Files: 
+	agency.txt
+	stops.txt
+	routes.txt
+	trips.txt
+	stop times.txt
+	calendar.txt
+	calendar dates.txt
+	shapes.txt
+
+SignUp Period:
+	2018.01-Winter
+
+ServiceGroup(s):
+	1 WEEKDAY
+	2 SATURDAY
+	3 SUNDAY
+	4 SATURDAY-HOLIDAY
+
+Line(s):
+	  1 - Algiers Point Ferry
+	  2 - Riverfront Streetcar
+	  4 - Chalmette Ferry
+	  5 - Marigny-Bywater
+	 10 - Tchoupitoulas
+	 11 - Magazine                  
+	 12 - St. Charles Streetcar   
+	 15 - Freret                    
+	 16 - S. Claiborne                   
+	 27 - Louisiana
+	 28 - M.L.King
+	 32 - Leonidas-Treme             
+	 39 - Tulane                
+	 45 - Lakeview
+	 47 - Canal Streetcar - Cemeteries
+	 48 - Canal Streetcar - City Park/Museum
+	 49 - Rampart-St.Claude Streetcar
+	 51 - St. Bernard-St.Anthony
+	 52 - St. Bernard-Paris Avenue
+	 55 - Elysian Fields          
+	 57 - Franklin                
+	 60 - Hayne                    
+	 62 - Morrison Express
+	 63 - New Orleans East Owl
+	 64 - Lake Forest Express            
+	 65 - Read-Crowder Express
+	 80 - Desire-Louisa 
+	 84 - Galvez                     
+	 88 - St. Claude/Jackson Barracks
+	 90 - Carrollton
+	 91 - Jackson-Esplanade
+	 94 - Broad
+	100 - Algiers Loop Owl
+	101 - Algiers Point           
+	102 - General Meyer          
+	106 - Aurora 
+	108 - Algiers Local             
+	114 - General DeGaulle-Sullen
+	115 - General DeGaulle-Tullis
+	201 - Kenner Loop
+	202 - Airport Express
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Date      time   Message                                                           
+--------  -----  ------------------------------------------------------------------
+01-02-18  11:53  Start export.                                                     
+01-02-18  11:53  Loaded 3 supplementary Records.                                   
+01-02-18  11:53  Loaded signup.                                                    
+01-02-18  11:53  Loaded 168 Headsigns.                                             
+01-02-18  11:53  Loaded 0 Calendar_dates.                                          
+01-02-18  11:53  Loaded 5953 stop pattern distances.                               
+01-02-18  11:53  Loaded 4 ServiceGroups.                                           
+01-02-18  11:53  Loaded 0 rows of ServiceGroup/ExcCombo Info.                      
+01-02-18  11:53  Loaded 41 lines.                                                  
+01-02-18  11:53  Loaded 10326 trips.                                               
+01-02-18  11:53  Loaded 2411 stops.                                                
+01-02-18  11:53  Session 1 was created.                                            
+01-02-18  11:53  Exported agency file.                                             
+01-02-18  11:53  Exported 2411 stops records.                                      
+01-02-18  11:53  Exported 41 route records.                                        
+01-02-18  11:53  Exported 10326 trip records.                                      
+01-02-18  11:53  Exported 60 stop time records from trip 0 to 29.                  
+01-02-18  11:53  Got 60 stop times from trip 30 to 59.                             
+01-02-18  11:53  Got 210 stop times from trip 60 to 89.                            
+01-02-18  11:53  Got 240 stop times from trip 90 to 119.                           
+01-02-18  11:53  Got 240 stop times from trip 120 to 149.                          
+01-02-18  11:53  Got 240 stop times from trip 150 to 179.                          
+01-02-18  11:53  Got 234 stop times from trip 180 to 209.                          
+01-02-18  11:53  Got 60 stop times from trip 210 to 239.                           
+01-02-18  11:53  Got 60 stop times from trip 240 to 269.                           
+01-02-18  11:53  Got 660 stop times from trip 270 to 299.                          
+01-02-18  11:53  Got 1218 stop times from trip 300 to 329.                         
+01-02-18  11:53  Got 1292 stop times from trip 330 to 359.                         
+01-02-18  11:53  Got 1230 stop times from trip 360 to 389.                         
+01-02-18  11:53  Got 1020 stop times from trip 390 to 419.                         
+01-02-18  11:53  Got 600 stop times from trip 420 to 449.                          
+01-02-18  11:53  Got 1212 stop times from trip 450 to 479.                         
+01-02-18  11:53  Got 1620 stop times from trip 480 to 509.                         
+01-02-18  11:53  Got 1620 stop times from trip 510 to 539.                         
+01-02-18  11:53  Got 1620 stop times from trip 540 to 569.                         
+01-02-18  11:53  Got 1620 stop times from trip 570 to 599.                         
+01-02-18  11:53  Got 1640 stop times from trip 600 to 629.                         
+01-02-18  11:53  Got 1650 stop times from trip 630 to 659.                         
+01-02-18  11:53  Got 1650 stop times from trip 660 to 689.                         
+01-02-18  11:53  Got 1650 stop times from trip 690 to 719.                         
+01-02-18  11:53  Got 1650 stop times from trip 720 to 749.                         
+01-02-18  11:54  Got 1254 stop times from trip 750 to 779.                         
+01-02-18  11:54  Got 1026 stop times from trip 780 to 809.                         
+01-02-18  11:54  Got 978 stop times from trip 810 to 839.                          
+01-02-18  11:54  Got 1110 stop times from trip 840 to 869.                         
+01-02-18  11:54  Got 1326 stop times from trip 870 to 899.                         
+01-02-18  11:54  Got 1310 stop times from trip 900 to 929.                         
+01-02-18  11:54  Got 1170 stop times from trip 930 to 959.                         
+01-02-18  11:54  Got 1436 stop times from trip 960 to 989.                         
+01-02-18  11:54  Got 1554 stop times from trip 990 to 1019.                        
+01-02-18  11:54  Got 810 stop times from trip 1020 to 1049.                        
+01-02-18  11:54  Got 824 stop times from trip 1050 to 1079.                        
+01-02-18  11:54  Got 1194 stop times from trip 1080 to 1109.                       
+01-02-18  11:54  Got 1152 stop times from trip 1110 to 1139.                       
+01-02-18  11:54  Got 1229 stop times from trip 1140 to 1169.                       
+01-02-18  11:54  Got 857 stop times from trip 1170 to 1199.                        
+01-02-18  11:54  Got 870 stop times from trip 1200 to 1229.                        
+01-02-18  11:54  Got 841 stop times from trip 1230 to 1259.                        
+01-02-18  11:54  Got 762 stop times from trip 1260 to 1289.                        
+01-02-18  11:54  Got 870 stop times from trip 1290 to 1319.                        
+01-02-18  11:54  Got 870 stop times from trip 1320 to 1349.                        
+01-02-18  11:54  Got 821 stop times from trip 1350 to 1379.                        
+01-02-18  11:54  Got 792 stop times from trip 1380 to 1409.                        
+01-02-18  11:54  Got 870 stop times from trip 1410 to 1439.                        
+01-02-18  11:54  Got 823 stop times from trip 1440 to 1469.                        
+01-02-18  11:54  Got 900 stop times from trip 1470 to 1499.                        
+01-02-18  11:54  Got 456 stop times from trip 1500 to 1529.                        
+01-02-18  11:54  Got 360 stop times from trip 1530 to 1559.                        
+01-02-18  11:54  Got 360 stop times from trip 1560 to 1589.                        
+01-02-18  11:54  Got 615 stop times from trip 1590 to 1619.                        
+01-02-18  11:54  Got 1440 stop times from trip 1620 to 1649.                       
+01-02-18  11:54  Got 1426 stop times from trip 1650 to 1679.                       
+01-02-18  11:54  Got 1398 stop times from trip 1680 to 1709.                       
+01-02-18  11:54  Got 1298 stop times from trip 1710 to 1739.                       
+01-02-18  11:54  Got 1164 stop times from trip 1740 to 1769.                       
+01-02-18  11:54  Got 1290 stop times from trip 1770 to 1799.                       
+01-02-18  11:54  Got 1830 stop times from trip 1800 to 1829.                       
+01-02-18  11:54  Got 1668 stop times from trip 1830 to 1859.                       
+01-02-18  11:54  Got 2499 stop times from trip 1860 to 1889.                       
+01-02-18  11:54  Got 2524 stop times from trip 1890 to 1919.                       
+01-02-18  11:54  Got 1362 stop times from trip 1920 to 1949.                       
+01-02-18  11:54  Got 1884 stop times from trip 1950 to 1979.                       
+01-02-18  11:54  Got 1841 stop times from trip 1980 to 2009.                       
+01-02-18  11:54  Got 1827 stop times from trip 2010 to 2039.                       
+01-02-18  11:54  Got 1728 stop times from trip 2040 to 2069.                       
+01-02-18  11:54  Got 1536 stop times from trip 2070 to 2099.                       
+01-02-18  11:54  Got 1592 stop times from trip 2100 to 2129.                       
+01-02-18  11:54  Got 1831 stop times from trip 2130 to 2159.                       
+01-02-18  11:54  Got 1656 stop times from trip 2160 to 2189.                       
+01-02-18  11:54  Got 1530 stop times from trip 2190 to 2219.                       
+01-02-18  11:54  Got 840 stop times from trip 2220 to 2249.                        
+01-02-18  11:54  Got 880 stop times from trip 2250 to 2279.                        
+01-02-18  11:54  Got 990 stop times from trip 2280 to 2309.                        
+01-02-18  11:54  Got 1019 stop times from trip 2310 to 2339.                       
+01-02-18  11:54  Got 1054 stop times from trip 2340 to 2369.                       
+01-02-18  11:54  Got 1412 stop times from trip 2370 to 2399.                       
+01-02-18  11:54  Got 1656 stop times from trip 2400 to 2429.                       
+01-02-18  11:54  Got 2434 stop times from trip 2430 to 2459.                       
+01-02-18  11:54  Got 2778 stop times from trip 2460 to 2489.                       
+01-02-18  11:54  Got 2699 stop times from trip 2490 to 2519.                       
+01-02-18  11:54  Got 2411 stop times from trip 2520 to 2549.                       
+01-02-18  11:54  Exported 102233 stop time records.                                
+01-02-18  11:54  Got 2404 stop times from trip 2550 to 2579.                       
+01-02-18  11:54  Got 972 stop times from trip 2580 to 2609.                        
+01-02-18  11:54  Got 1115 stop times from trip 2610 to 2639.                       
+01-02-18  11:54  Got 1147 stop times from trip 2640 to 2669.                       
+01-02-18  11:54  Got 1294 stop times from trip 2670 to 2699.                       
+01-02-18  11:55  Got 1934 stop times from trip 2700 to 2729.                       
+01-02-18  11:55  Got 1119 stop times from trip 2730 to 2759.                       
+01-02-18  11:55  Got 1046 stop times from trip 2760 to 2789.                       
+01-02-18  11:55  Got 1227 stop times from trip 2790 to 2819.                       
+01-02-18  11:55  Got 1214 stop times from trip 2820 to 2849.                       
+01-02-18  11:55  Got 475 stop times from trip 2850 to 2879.                        
+01-02-18  11:55  Got 60 stop times from trip 2880 to 2909.                         
+01-02-18  11:55  Got 132 stop times from trip 2910 to 2939.                        
+01-02-18  11:55  Got 240 stop times from trip 2940 to 2969.                        
+01-02-18  11:55  Got 240 stop times from trip 2970 to 2999.                        
+01-02-18  11:55  Got 240 stop times from trip 3000 to 3029.                        
+01-02-18  11:55  Got 238 stop times from trip 3030 to 3059.                        
+01-02-18  11:55  Got 134 stop times from trip 3060 to 3089.                        
+01-02-18  11:55  Got 60 stop times from trip 3090 to 3119.                         
+01-02-18  11:55  Got 434 stop times from trip 3120 to 3149.                        
+01-02-18  11:55  Got 921 stop times from trip 3150 to 3179.                        
+01-02-18  11:55  Got 1305 stop times from trip 3180 to 3209.                       
+01-02-18  11:55  Got 1230 stop times from trip 3210 to 3239.                       
+01-02-18  11:55  Got 705 stop times from trip 3240 to 3269.                        
+01-02-18  11:55  Got 1212 stop times from trip 3270 to 3299.                       
+01-02-18  11:55  Got 1620 stop times from trip 3300 to 3329.                       
+01-02-18  11:55  Got 1620 stop times from trip 3330 to 3359.                       
+01-02-18  11:55  Got 1620 stop times from trip 3360 to 3389.                       
+01-02-18  11:55  Got 1620 stop times from trip 3390 to 3419.                       
+01-02-18  11:55  Got 1640 stop times from trip 3420 to 3449.                       
+01-02-18  11:55  Got 1650 stop times from trip 3450 to 3479.                       
+01-02-18  11:55  Got 1650 stop times from trip 3480 to 3509.                       
+01-02-18  11:55  Got 1650 stop times from trip 3510 to 3539.                       
+01-02-18  11:55  Got 1650 stop times from trip 3540 to 3569.                       
+01-02-18  11:55  Got 1242 stop times from trip 3570 to 3599.                       
+01-02-18  11:55  Got 998 stop times from trip 3600 to 3629.                        
+01-02-18  11:55  Got 1182 stop times from trip 3630 to 3659.                       
+01-02-18  11:55  Got 1378 stop times from trip 3660 to 3689.                       
+01-02-18  11:55  Got 1166 stop times from trip 3690 to 3719.                       
+01-02-18  11:55  Got 1208 stop times from trip 3720 to 3749.                       
+01-02-18  11:55  Got 1740 stop times from trip 3750 to 3779.                       
+01-02-18  11:55  Got 841 stop times from trip 3780 to 3809.                        
+01-02-18  11:55  Got 1019 stop times from trip 3810 to 3839.                       
+01-02-18  11:55  Got 1194 stop times from trip 3840 to 3869.                       
+01-02-18  11:55  Got 1106 stop times from trip 3870 to 3899.                       
+01-02-18  11:55  Got 857 stop times from trip 3900 to 3929.                        
+01-02-18  11:55  Got 870 stop times from trip 3930 to 3959.                        
+01-02-18  11:55  Got 841 stop times from trip 3960 to 3989.                        
+01-02-18  11:55  Got 762 stop times from trip 3990 to 4019.                        
+01-02-18  11:55  Got 870 stop times from trip 4020 to 4049.                        
+01-02-18  11:55  Got 870 stop times from trip 4050 to 4079.                        
+01-02-18  11:55  Got 808 stop times from trip 4080 to 4109.                        
+01-02-18  11:55  Got 805 stop times from trip 4110 to 4139.                        
+01-02-18  11:55  Got 854 stop times from trip 4140 to 4169.                        
+01-02-18  11:55  Got 848 stop times from trip 4170 to 4199.                        
+01-02-18  11:55  Got 832 stop times from trip 4200 to 4229.                        
+01-02-18  11:55  Got 362 stop times from trip 4230 to 4259.                        
+01-02-18  11:55  Got 360 stop times from trip 4260 to 4289.                        
+01-02-18  11:55  Got 360 stop times from trip 4290 to 4319.                        
+01-02-18  11:55  Got 939 stop times from trip 4320 to 4349.                        
+01-02-18  11:56  Got 1440 stop times from trip 4350 to 4379.                       
+01-02-18  11:56  Got 1417 stop times from trip 4380 to 4409.                       
+01-02-18  11:56  Got 1416 stop times from trip 4410 to 4439.                       
+01-02-18  11:56  Got 1208 stop times from trip 4440 to 4469.                       
+01-02-18  11:56  Got 1176 stop times from trip 4470 to 4499.                       
+01-02-18  11:56  Got 1350 stop times from trip 4500 to 4529.                       
+01-02-18  11:56  Got 1794 stop times from trip 4530 to 4559.                       
+01-02-18  11:56  Got 1914 stop times from trip 4560 to 4589.                       
+01-02-18  11:56  Got 2714 stop times from trip 4590 to 4619.                       
+01-02-18  11:56  Got 1598 stop times from trip 4620 to 4649.                       
+01-02-18  11:56  Got 1865 stop times from trip 4650 to 4679.                       
+01-02-18  11:56  Got 1827 stop times from trip 4680 to 4709.                       
+01-02-18  11:56  Got 1748 stop times from trip 4710 to 4739.                       
+01-02-18  11:56  Got 1528 stop times from trip 4740 to 4769.                       
+01-02-18  11:56  Got 1820 stop times from trip 4770 to 4799.                       
+01-02-18  11:56  Got 1624 stop times from trip 4800 to 4829.                       
+01-02-18  11:56  Got 1740 stop times from trip 4830 to 4859.                       
+01-02-18  11:56  Got 870 stop times from trip 4860 to 4889.                        
+01-02-18  11:56  Got 945 stop times from trip 4890 to 4919.                        
+01-02-18  11:56  Got 1018 stop times from trip 4920 to 4949.                       
+01-02-18  11:56  Got 1193 stop times from trip 4950 to 4979.                       
+01-02-18  11:56  Got 1818 stop times from trip 4980 to 5009.                       
+01-02-18  11:56  Got 2880 stop times from trip 5010 to 5039.                       
+01-02-18  11:56  Got 2582 stop times from trip 5040 to 5069.                       
+01-02-18  11:56  Got 2411 stop times from trip 5070 to 5099.                       
+01-02-18  11:56  Exported 102026 stop time records.                                
+01-02-18  11:56  Got 1763 stop times from trip 5100 to 5129.                       
+01-02-18  11:56  Got 817 stop times from trip 5130 to 5159.                        
+01-02-18  11:56  Got 1290 stop times from trip 5160 to 5189.                       
+01-02-18  11:56  Got 1413 stop times from trip 5190 to 5219.                       
+01-02-18  11:56  Got 1463 stop times from trip 5220 to 5249.                       
+01-02-18  11:56  Got 836 stop times from trip 5250 to 5279.                        
+01-02-18  11:56  Got 1228 stop times from trip 5280 to 5309.                       
+01-02-18  11:56  Got 1147 stop times from trip 5310 to 5339.                       
+01-02-18  11:56  Got 1030 stop times from trip 5340 to 5369.                       
+01-02-18  11:56  Got 137 stop times from trip 5370 to 5399.                        
+01-02-18  11:56  Got 98 stop times from trip 5400 to 5429.                         
+01-02-18  11:56  Got 238 stop times from trip 5430 to 5459.                        
+01-02-18  11:56  Got 240 stop times from trip 5460 to 5489.                        
+01-02-18  11:56  Got 240 stop times from trip 5490 to 5519.                        
+01-02-18  11:56  Got 240 stop times from trip 5520 to 5549.                        
+01-02-18  11:56  Got 168 stop times from trip 5550 to 5579.                        
+01-02-18  11:56  Got 60 stop times from trip 5580 to 5609.                         
+01-02-18  11:56  Got 302 stop times from trip 5610 to 5639.                        
+01-02-18  11:56  Got 789 stop times from trip 5640 to 5669.                        
+01-02-18  11:56  Got 1329 stop times from trip 5670 to 5699.                       
+01-02-18  11:56  Got 1236 stop times from trip 5700 to 5729.                       
+01-02-18  11:56  Got 831 stop times from trip 5730 to 5759.                        
+01-02-18  11:56  Got 1042 stop times from trip 5760 to 5789.                       
+01-02-18  11:56  Got 1620 stop times from trip 5790 to 5819.                       
+01-02-18  11:56  Got 1620 stop times from trip 5820 to 5849.                       
+01-02-18  11:56  Got 1620 stop times from trip 5850 to 5879.                       
+01-02-18  11:56  Got 1620 stop times from trip 5880 to 5909.                       
+01-02-18  11:56  Got 1635 stop times from trip 5910 to 5939.                       
+01-02-18  11:56  Got 1650 stop times from trip 5940 to 5969.                       
+01-02-18  11:56  Got 1650 stop times from trip 5970 to 5999.                       
+01-02-18  11:56  Got 1650 stop times from trip 6000 to 6029.                       
+01-02-18  11:56  Got 1650 stop times from trip 6030 to 6059.                       
+01-02-18  11:56  Got 1342 stop times from trip 6060 to 6089.                       
+01-02-18  11:56  Got 1005 stop times from trip 6090 to 6119.                       
+01-02-18  11:56  Got 1135 stop times from trip 6120 to 6149.                       
+01-02-18  11:56  Got 1358 stop times from trip 6150 to 6179.                       
+01-02-18  11:56  Got 1206 stop times from trip 6180 to 6209.                       
+01-02-18  11:56  Got 1151 stop times from trip 6210 to 6239.                       
+01-02-18  11:56  Got 1702 stop times from trip 6240 to 6269.                       
+01-02-18  11:56  Got 996 stop times from trip 6270 to 6299.                        
+01-02-18  11:56  Got 954 stop times from trip 6300 to 6329.                        
+01-02-18  11:56  Got 1159 stop times from trip 6330 to 6359.                       
+01-02-18  11:56  Got 1124 stop times from trip 6360 to 6389.                       
+01-02-18  11:56  Got 857 stop times from trip 6390 to 6419.                        
+01-02-18  11:56  Got 870 stop times from trip 6420 to 6449.                        
+01-02-18  11:56  Got 841 stop times from trip 6450 to 6479.                        
+01-02-18  11:56  Got 762 stop times from trip 6480 to 6509.                        
+01-02-18  11:56  Got 870 stop times from trip 6510 to 6539.                        
+01-02-18  11:56  Got 870 stop times from trip 6540 to 6569.                        
+01-02-18  11:56  Got 808 stop times from trip 6570 to 6599.                        
+01-02-18  11:56  Got 805 stop times from trip 6600 to 6629.                        
+01-02-18  11:56  Got 854 stop times from trip 6630 to 6659.                        
+01-02-18  11:56  Got 847 stop times from trip 6660 to 6689.                        
+01-02-18  11:57  Got 850 stop times from trip 6690 to 6719.                        
+01-02-18  11:57  Got 362 stop times from trip 6720 to 6749.                        
+01-02-18  11:57  Got 360 stop times from trip 6750 to 6779.                        
+01-02-18  11:57  Got 360 stop times from trip 6780 to 6809.                        
+01-02-18  11:57  Got 903 stop times from trip 6810 to 6839.                        
+01-02-18  11:57  Got 1440 stop times from trip 6840 to 6869.                       
+01-02-18  11:57  Got 1384 stop times from trip 6870 to 6899.                       
+01-02-18  11:57  Got 1298 stop times from trip 6900 to 6929.                       
+01-02-18  11:57  Got 1198 stop times from trip 6930 to 6959.                       
+01-02-18  11:57  Got 1510 stop times from trip 6960 to 6989.                       
+01-02-18  11:57  Got 1746 stop times from trip 6990 to 7019.                       
+01-02-18  11:57  Got 2206 stop times from trip 7020 to 7049.                       
+01-02-18  11:57  Got 2582 stop times from trip 7050 to 7079.                       
+01-02-18  11:57  Got 1318 stop times from trip 7080 to 7109.                       
+01-02-18  11:57  Got 2001 stop times from trip 7110 to 7139.                       
+01-02-18  11:57  Got 1851 stop times from trip 7140 to 7169.                       
+01-02-18  11:57  Got 1708 stop times from trip 7170 to 7199.                       
+01-02-18  11:57  Got 1536 stop times from trip 7200 to 7229.                       
+01-02-18  11:57  Got 1804 stop times from trip 7230 to 7259.                       
+01-02-18  11:57  Got 1656 stop times from trip 7260 to 7289.                       
+01-02-18  11:57  Got 1530 stop times from trip 7290 to 7319.                       
+01-02-18  11:57  Got 840 stop times from trip 7320 to 7349.                        
+01-02-18  11:57  Got 985 stop times from trip 7350 to 7379.                        
+01-02-18  11:57  Got 1029 stop times from trip 7380 to 7409.                       
+01-02-18  11:57  Got 1326 stop times from trip 7410 to 7439.                       
+01-02-18  11:57  Got 2178 stop times from trip 7440 to 7469.                       
+01-02-18  11:57  Got 2880 stop times from trip 7470 to 7499.                       
+01-02-18  11:57  Got 2442 stop times from trip 7500 to 7529.                       
+01-02-18  11:57  Got 2439 stop times from trip 7530 to 7559.                       
+01-02-18  11:57  Got 1371 stop times from trip 7560 to 7589.                       
+01-02-18  11:57  Got 913 stop times from trip 7590 to 7619.                        
+01-02-18  11:57  Exported 100174 stop time records.                                
+01-02-18  11:57  Got 1170 stop times from trip 7620 to 7649.                       
+01-02-18  11:57  Got 1307 stop times from trip 7650 to 7679.                       
+01-02-18  11:57  Got 984 stop times from trip 7680 to 7709.                        
+01-02-18  11:57  Got 1142 stop times from trip 7710 to 7739.                       
+01-02-18  11:57  Got 1198 stop times from trip 7740 to 7769.                       
+01-02-18  11:57  Got 825 stop times from trip 7770 to 7799.                        
+01-02-18  11:57  Got 82 stop times from trip 7800 to 7829.                         
+01-02-18  11:57  Got 80 stop times from trip 7830 to 7859.                         
+01-02-18  11:57  Got 238 stop times from trip 7860 to 7889.                        
+01-02-18  11:57  Got 240 stop times from trip 7890 to 7919.                        
+01-02-18  11:57  Got 240 stop times from trip 7920 to 7949.                        
+01-02-18  11:57  Got 240 stop times from trip 7950 to 7979.                        
+01-02-18  11:57  Got 186 stop times from trip 7980 to 8009.                        
+01-02-18  11:57  Got 60 stop times from trip 8010 to 8039.                         
+01-02-18  11:57  Got 236 stop times from trip 8040 to 8069.                        
+01-02-18  11:57  Got 723 stop times from trip 8070 to 8099.                        
+01-02-18  11:57  Got 1338 stop times from trip 8100 to 8129.                       
+01-02-18  11:57  Got 1242 stop times from trip 8130 to 8159.                       
+01-02-18  11:57  Got 894 stop times from trip 8160 to 8189.                        
+01-02-18  11:57  Got 906 stop times from trip 8190 to 8219.                        
+01-02-18  11:57  Got 1620 stop times from trip 8220 to 8249.                       
+01-02-18  11:57  Got 1620 stop times from trip 8250 to 8279.                       
+01-02-18  11:57  Got 1620 stop times from trip 8280 to 8309.                       
+01-02-18  11:57  Got 1620 stop times from trip 8310 to 8339.                       
+01-02-18  11:57  Got 1631 stop times from trip 8340 to 8369.                       
+01-02-18  11:57  Got 1650 stop times from trip 8370 to 8399.                       
+01-02-18  11:57  Got 1650 stop times from trip 8400 to 8429.                       
+01-02-18  11:57  Got 1650 stop times from trip 8430 to 8459.                       
+01-02-18  11:57  Got 1650 stop times from trip 8460 to 8489.                       
+01-02-18  11:57  Got 1416 stop times from trip 8490 to 8519.                       
+01-02-18  11:57  Got 1023 stop times from trip 8520 to 8549.                       
+01-02-18  11:57  Got 1071 stop times from trip 8550 to 8579.                       
+01-02-18  11:57  Got 1334 stop times from trip 8580 to 8609.                       
+01-02-18  11:57  Got 1254 stop times from trip 8610 to 8639.                       
+01-02-18  11:57  Got 1170 stop times from trip 8640 to 8669.                       
+01-02-18  11:57  Got 1569 stop times from trip 8670 to 8699.                       
+01-02-18  11:57  Got 1182 stop times from trip 8700 to 8729.                       
+01-02-18  11:57  Got 876 stop times from trip 8730 to 8759.                        
+01-02-18  11:57  Got 1182 stop times from trip 8760 to 8789.                       
+01-02-18  11:57  Got 1265 stop times from trip 8790 to 8819.                       
+01-02-18  11:57  Got 831 stop times from trip 8820 to 8849.                        
+01-02-18  11:57  Got 870 stop times from trip 8850 to 8879.                        
+01-02-18  11:57  Got 841 stop times from trip 8880 to 8909.                        
+01-02-18  11:57  Got 762 stop times from trip 8910 to 8939.                        
+01-02-18  11:57  Got 870 stop times from trip 8940 to 8969.                        
+01-02-18  11:57  Got 870 stop times from trip 8970 to 8999.                        
+01-02-18  11:57  Got 821 stop times from trip 9000 to 9029.                        
+01-02-18  11:57  Got 792 stop times from trip 9030 to 9059.                        
+01-02-18  11:57  Got 870 stop times from trip 9060 to 9089.                        
+01-02-18  11:57  Got 821 stop times from trip 9090 to 9119.                        
+01-02-18  11:57  Got 900 stop times from trip 9120 to 9149.                        
+01-02-18  11:57  Got 492 stop times from trip 9150 to 9179.                        
+01-02-18  11:58  Got 360 stop times from trip 9180 to 9209.                        
+01-02-18  11:58  Got 360 stop times from trip 9210 to 9239.                        
+01-02-18  11:58  Got 543 stop times from trip 9240 to 9269.                        
+01-02-18  11:58  Got 1440 stop times from trip 9270 to 9299.                       
+01-02-18  11:58  Got 1428 stop times from trip 9300 to 9329.                       
+01-02-18  11:58  Got 1394 stop times from trip 9330 to 9359.                       
+01-02-18  11:58  Got 1318 stop times from trip 9360 to 9389.                       
+01-02-18  11:58  Got 1154 stop times from trip 9390 to 9419.                       
+01-02-18  11:58  Got 1230 stop times from trip 9420 to 9449.                       
+01-02-18  11:58  Got 1730 stop times from trip 9450 to 9479.                       
+01-02-18  11:58  Got 1680 stop times from trip 9480 to 9509.                       
+01-02-18  11:58  Got 2590 stop times from trip 9510 to 9539.                       
+01-02-18  11:58  Got 2130 stop times from trip 9540 to 9569.                       
+01-02-18  11:58  Got 1541 stop times from trip 9570 to 9599.                       
+01-02-18  11:58  Got 1934 stop times from trip 9600 to 9629.                       
+01-02-18  11:58  Got 1810 stop times from trip 9630 to 9659.                       
+01-02-18  11:58  Got 1584 stop times from trip 9660 to 9689.                       
+01-02-18  11:58  Got 1687 stop times from trip 9690 to 9719.                       
+01-02-18  11:58  Got 1719 stop times from trip 9720 to 9749.                       
+01-02-18  11:58  Got 1700 stop times from trip 9750 to 9779.                       
+01-02-18  11:58  Got 1200 stop times from trip 9780 to 9809.                       
+01-02-18  11:58  Got 890 stop times from trip 9810 to 9839.                        
+01-02-18  11:58  Got 996 stop times from trip 9840 to 9869.                        
+01-02-18  11:58  Got 1034 stop times from trip 9870 to 9899.                       
+01-02-18  11:58  Got 1579 stop times from trip 9900 to 9929.                       
+01-02-18  11:58  Got 2607 stop times from trip 9930 to 9959.                       
+01-02-18  11:58  Got 2722 stop times from trip 9960 to 9989.                       
+01-02-18  11:58  Got 2425 stop times from trip 9990 to 10019.                      
+01-02-18  11:58  Got 2259 stop times from trip 10020 to 10049.                     
+01-02-18  11:58  Got 872 stop times from trip 10050 to 10079.                      
+01-02-18  11:58  Got 1206 stop times from trip 10080 to 10109.                     
+01-02-18  11:58  Got 1135 stop times from trip 10110 to 10139.                     
+01-02-18  11:58  Got 1399 stop times from trip 10140 to 10169.                     
+01-02-18  11:58  Exported 100780 stop time records.                                
+01-02-18  11:58  Got 1353 stop times from trip 10170 to 10199.                     
+01-02-18  11:58  Got 833 stop times from trip 10200 to 10229.                      
+01-02-18  11:58  Got 1224 stop times from trip 10230 to 10259.                     
+01-02-18  11:58  Got 1147 stop times from trip 10260 to 10289.                     
+01-02-18  11:58  Got 1005 stop times from trip 10290 to 10319.                     
+01-02-18  11:58  Got 78 stop times from trip 10320 to 10325.                       
+01-02-18  11:58  Exported 5640 stop time records.                                  
+01-02-18  11:58  Exported 5 calendar records.                                      
+01-02-18  11:58  Fail to export calendar date file.                                
+01-02-18  11:58  Exported 3097 shapes from Pat 0 to 37.                            
+01-02-18  11:58    *Warning* Pattern 49576 lost shape between sequence 5 and 6.    
+01-02-18  11:58    *Warning* Pattern 49576 lost shape between sequence 7 and 8.    
+01-02-18  11:58    *Warning* Pattern 49580 lost shape between sequence 76 and 77.  
+01-02-18  11:58    *Warning* Pattern 49580 lost shape between sequence 78 and 79.  
+01-02-18  11:59  Got 3032 shapes - pattern 38 to 76.                               
+01-02-18  11:59    *Warning* Pattern 49596 lost shape between sequence 57 and 58.  
+01-02-18  11:59    *Warning* Pattern 49599 lost shape between sequence 188 and 189.
+01-02-18  11:59    *Warning* Pattern 49602 lost shape between sequence 270 and 271.
+01-02-18  11:59  Got 3023 shapes - pattern 77 to 89.                               
+01-02-18  11:59    *Warning* Pattern 49613 lost shape between sequence 6 and 7.    
+01-02-18  11:59  Got 3047 shapes - pattern 90 to 103.                              
+01-02-18  11:59    *Warning* Pattern 49623 lost shape between sequence 263 and 264.
+01-02-18  11:59  Got 3274 shapes - pattern 104 to 120.                             
+01-02-18  11:59    *Warning* Pattern 49647 lost shape between sequence 51 and 52.  
+01-02-18  11:59    *Warning* Pattern 49652 lost shape between sequence 27 and 28.  
+01-02-18  11:59    *Warning* Pattern 49653 lost shape between sequence 27 and 28.  
+01-02-18  11:59  Got 3200 shapes - pattern 121 to 135.                             
+01-02-18  11:59    *Warning* Pattern 49656 lost shape between sequence 25 and 26.  
+01-02-18  11:59    *Warning* Pattern 49668 lost shape between sequence 28 and 29.  
+01-02-18  11:59  Got 3247 shapes - pattern 136 to 150.                             
+01-02-18  11:59    *Warning* Pattern 49683 lost shape between sequence 31 and 32.  
+01-02-18  11:59    *Warning* Pattern 49684 lost shape between sequence 31 and 32.  
+01-02-18  11:59  Got 3197 shapes - pattern 151 to 165.                             
+01-02-18  11:59    *Warning* Pattern 49685 lost shape between sequence 31 and 32.  
+01-02-18  11:59  Got 610 shapes - pattern 166 to 167.                              
+01-02-18  11:59  Exported 22630 shape records.                                     
+01-02-18  11:59  Closed seeeion 1.                                                 
+
