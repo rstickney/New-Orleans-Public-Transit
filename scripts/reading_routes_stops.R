@@ -35,13 +35,18 @@ new_orleans$routes$route_id[32]
 stops <- nola_sf[[9]][[1]]
 routes <- nola_sf[[9]][[2]]
 
-st_in
+test <- st_intersects(stops, broad) 
 
+stops[test] %>% mapview()
+st_crs(stops)
+
+
+class(broad)
+?st_intersects
 nola_sf[[9]] %>% mapview()
 
-filter(routes, short_name == "94") %>% 
-  mapview()
-
+broad <- filter(routes, short_name == "94") 
+rm()
 routes$route_id_check <- new_orleans$routes$route_id
 
 routes <- new_orleans[['routes_df']] 
