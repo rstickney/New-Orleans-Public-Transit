@@ -45,21 +45,6 @@ tf <- function(x, y){
   date_time <- paste(y, time) %>% as.POSIXct(format="%Y-%m-%d %H:%M:%S")
   }
 
-result <- map(trial$TIME_ACTUAL_ARRIVE, tf, y = test_map$SURVEY_DATE)
-
-result <- test_map$TIME_ACTUAL_ARRIVE %>%
-  tf(test_map$SURVEY_DATE)
-
-library(purrr)
-test_map <- head(trial_gr, 10) %>%
-  nest()
-test_map[[1]]
-##Create unique identifier that groups by:
-  # -ROUTE_NUMBER
-  # -SERVICE_PERIOD
-  # -TIME_PERIOD
-  # -DIRECTION_NAME
-  # -SURVEY_DATE
 
 ##Use mutate to create multiple variables at once
 #When bus arrives to an actual scheduled stop, there time 
@@ -71,13 +56,15 @@ trial_am <- trial %>%
          tad2 = tf(TIME_ACTUAL_DEPART, SURVEY_DATE),
          id = paste0(ROUTE_NUMBER,"_", SERVICE_PERIOD, "_", TIME_PERIOD, "_", 
                      DIRECTION_NAME,"_", SURVEY_DATE)) %>% #Create a unique ID for reference)
-  group_by(SERIAL_NUMBER) %>% #Create groups within the DF--serial_number is a unique trip  
+  group_by(SERIAL_NUMBER)  #Create groups within the DF--serial_number is a unique trip  
   nest()
 
 
-travel_func <- function(x, y, z){
+travel_func <- function(x, y = "taa2", z = "tad2"){
   lead(x[,y], default = first(x[,y])) - x[,z]
 }
+
+travel_func(trial_am)
 
 travel_func(trial_am, "taa2", "tad2")
 
@@ -87,13 +74,17 @@ View(table(trial_am$STOP_ID))
 #Am attempting to get the actual time difference on here, but have two problems:
 #1) Group by on the serial number and date isn't working...will need to turn it into a nested DF
 #2) The speeds that are emerging are by no means realist. Will need to re-measure the distance?
+trial_am$activity <- trial_am$PASSENGERS_OFF + trial_am$PASSENGERS_ON
+
 ott <- trial_am %>%
   group_by(SERIAL_NUMBER, SURVEY_DATE, TRIP_START_TIME) %>%
-  mutate(diff = difftime(lead(taa2, default = first(taa2)), tad2),
+  mutate(diff = if_else(activity > 0, 
+           difftime(lead(taa2, default = first(taa2)), tad2),
+           difftime(lead(taa2, default = first(taa2)), taa2)),
          speed = SEGMENT_MILES/(as.numeric(diff)/3600))
   select(STOP_ID, MAIN_CROSS_STREET, SEGMENT_MILES, taa2, tad2, diff, speed, PASSENGERS_ON, PASSENGERS_OFF)
-
-
+range(ott$diff)
+ 
 summary(ott$diff)
 summary(trial_am)
 range(ott$diff)

@@ -80,6 +80,11 @@ broad_all <- list()
 broad_all[[1]] <- broad
 broad_all[[2]] <- broad_route
 
+#Finding distance between stops is already included in GTFS data:
+#https://support.trilliumtransit.com/hc/en-us/articles/214415803-Using-GTFS-to-Find-Distance-Between-Stops-For-NTD- 
+
+glimpse(stop_times)
+stop_times %>% head(1000) %>% View()
 mapview(broad_all)
 
 View(index)
