@@ -62,9 +62,6 @@ trial_am <- trial %>%
                         difftime(lead(taa2, default = first(taa2)), taa2)) %>% as.numeric(),
          speed = SEGMENT_MILES/((diff %>% as.numeric())/3600))
 
-
-plot(trial_am$SORT_ORDER, trial_am$diff)
-
 trial_pm <- trial %>%
   filter(TIME_PERIOD == "PM Peak", DIRECTION_NAME == "OUTBOUND", SERVICE_PERIOD == "Weekday",
          !is.na(TIME_ACTUAL_ARRIVE)) %>% #~500 from the parameters we're looking at have blank arrival times
