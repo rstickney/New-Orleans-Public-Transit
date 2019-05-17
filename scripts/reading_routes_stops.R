@@ -16,24 +16,25 @@ library(sf)
 #   filter(grepl('NORTA GTFS', t, ignore.case= TRUE))
 
 #Load in the GTFS data for NORTA (is saved in google drive)
-new_orleans <- read_gtfs("data\\2018 - Winter B - G.zip", 
+new_orleans <- read_gtfs("data//norta.zip", 
                          local = TRUE) %>%
   gtfs_as_sf()
 
-
+mapview(new_orleans[])
 nola_sf <- new_orleans %>% 
   gtfs_as_sf()
 
 nola_route <- new_orleans %>%
   get_route_geometry()
 
+mapview(nola_route)
+
 str(new_orleans)
 plot(new_orleans)
-
 new_orleans$routes$route_id[32]
 
-stops_sf <- nola_sf[[9]][[1]]
-routes_sf <- nola_sf[[9]][[2]]
+stops_sf <- nola_sf[[8]][[1]]
+routes_sf <- nola_sf[[8]][[2]]
 
 test <- st_intersects(stops, broad) 
 
@@ -71,10 +72,22 @@ nola =  select(routes, route_type, route_short_name,route_id) %>%
   inner_join(select(stops, stop_id, stop_name, lat=stop_lat, lon=stop_lon)) %>% 
   unique()
 
-broad <- filter(nola, route_short_name == "94") %>%
+broad_sf <- filter(nola, route_short_name == "94") %>%
   inner_join(stops_sf) %>%
   st_as_sf()
 
+test_am <- filter(trial_am, SERIAL_NUMBER == 813191)
+test_join <-  merge(broad_sf, test_am)
+mapview(test_join)
+
+compare_stops <- data.frame, 
+
+sf_stops <- unique(broad_sf$stop_id) %>% as.data.frame()
+am_stops <- unique(test_am$stop_id) %>% as.data.frame()
+
+match <- inner_join(sf_stops, am_stops)
+View(sf_stops)
+View(am_stops)
 #When you pass a list of sf objects to mapview it makes them layers you can manipulate
 broad_all <- list()
 broad_all[[1]] <- broad

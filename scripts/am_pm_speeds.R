@@ -1,5 +1,3 @@
-setwd("C:\\Users\\rober\\Dropbox\\Transit Data\\Bus Routes_Jan01.15-01.29")
-
 library(readxl)
 library(tidyverse)
 library(lubridate)
@@ -8,8 +6,17 @@ library(chron)
 
 #temp = list.files(pattern="*")
 #myfiles = lapply(temp, read_xlsx)
-broad <- read_xlsx("RT94.xlsx")
+broad <- read_xlsx("data/RT94.xlsx")
 
+##Clean up the time-stamp data (currently adds in a date due to it being done in excel); 
+#convert to a time object
+
+##Create a quick function to save space
+#We need to convert it into a full date-time object to properly difference it later
+tf <- function(x, y){
+  time <- format(x, "%H:%M:%S") 
+  date_time <- paste(y, time) %>% as.POSIXct(format="%Y-%m-%d %H:%M:%S")
+}
 
 #Remove excess variables to start:
 #Keep:
@@ -28,7 +35,7 @@ broad <- read_xlsx("RT94.xlsx")
   # -PASSENGERS_ON
   # -PASSENGERS_OFF
   # -PASSENGERS_SPOT
-  
+
 trial <- filter(broad, TIMEPOINT == 0) %>% #Filter out timepoints that are -1, as they are false
                                           #(there is some type of error in clever...)
   select(SERIAL_NUMBER, SORT_ORDER, SURVEY_DATE, SERVICE_PERIOD, TIME_PERIOD, TRIP_START_TIME,
@@ -38,18 +45,8 @@ trial <- filter(broad, TIMEPOINT == 0) %>% #Filter out timepoints that are -1, a
   mutate(tst2 = tf(TRIP_START_TIME, SURVEY_DATE),
          taa2 = tf(TIME_ACTUAL_ARRIVE, SURVEY_DATE),
          tad2 = tf(TIME_ACTUAL_DEPART, SURVEY_DATE),
-         activity = PASSENGERS_OFF + PASSENGERS_ON)
-
-##Clean up the time-stamp data (currently adds in a date due to it being done in excel); 
-#convert to a time object
-
-##Create a quick function to save space
-#We need to convert it into a full date-time object to properly difference it later
-tf <- function(x, y){
-  time <- format(x, "%H:%M:%S") 
-  date_time <- paste(y, time) %>% as.POSIXct(format="%Y-%m-%d %H:%M:%S")
-  }
-
+         activity = PASSENGERS_OFF + PASSENGERS_ON,
+         stop_id = as.character(STOP_ID))
 
 ##Use mutate to create multiple variables at once
 #When bus arrives to an actual scheduled stop, there time 
