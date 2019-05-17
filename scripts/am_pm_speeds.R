@@ -73,3 +73,47 @@ examine <- filter(trial_am, SERIAL_NUMBER == 831629 |
          SERIAL_NUMBER == 836333)  
 range(trial_am$diff)
 range(trial_pm$diff)
+
+
+###Aggregating the boarding and travel time info--method works very quickly and well
+#need to investigate the negative travel tiems on it and get a better sense of the data
+#Until then convert it into NAs where appropriate
+trial_am <- trial_am %>%
+  mutate(diff = if_else(diff <0 , 0, diff)) %>%
+  naniar::replace_with_na(replace = list(diff = 0))
+
+
+test_agg <- ungroup(trial_am) %>%
+  select(SORT_ORDER, stop_id, MAIN_CROSS_STREET, PASSENGERS_ON, PASSENGERS_OFF, activity, diff) %>%
+  group_by(SORT_ORDER, stop_id, MAIN_CROSS_STREET) %>%
+  summarise(mean_activity = sum(activity, na.rm = TRUE),
+            mean_diff = mean(diff, na.rm = TRUE))
+
+
+##Can clearly see that the stop IDs don't match up with the ones from Arrival time data
+test_merge <- stops_sf %>%
+  merge(test_agg) %>%
+  select(stop_id, stop_name, MAIN_CROSS_STREET)
+
+
+glimpse(test_merge)
+
+
+sum(test_agg$mean_diff, na.rm = TRUE) #Seems to be a reasonable total travel time
+trial_am <- trial_am %>%
+  mutate(diff = if_else(diff <0 , 0, diff)) %>%
+  naniar::replace_with_na(replace = list(diff = 0))
+
+
+
+?naniar::replace_with_na_if
+trial_agg <- trial_am %>%
+  group_by(SERIAL_NUMBER) %>%
+  summarise((diff2 = if_else(activity > 0,  #Conditional added in to adjust for when there are no passengers
+            difftime(lead(taa2, default = first(taa2)), tad2),
+            difftime(lead(taa2, default = first(taa2)), taa2)) %>% as.numeric()))
+  
+glimpse(trial_am)
+filter(trial_am, STOP_ID == 835)$SERIAL_NUMBER %>% table() %>% View()
+glimpse(broad)
+broad$SCHEDULE_ID %>% table()
