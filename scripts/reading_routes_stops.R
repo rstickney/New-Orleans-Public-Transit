@@ -3,6 +3,7 @@ library(tidyverse)
 library(tidytransit)
 library(mapview)
 library(sf)
+library(leaflet)
 
 # devtools::install_github('ropensci/gtfsr')
 # #adapted from: https://rpubs.com/data_feelings/data607_gtfs
@@ -19,6 +20,26 @@ library(sf)
 new_orleans <- read_gtfs("data//norta.zip", 
                          local = TRUE) %>%
   gtfs_as_sf()
+
+
+##Will manually compare the clever stops and the GTFS stops
+clever_stops <- read_csv("data//clever_94_stops_clean.csv") %>%
+  na.omit() %>%
+  st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326)
+st_crs(clever_stops)
+stops_list <- list()
+
+stops_list[[1]] <- clever_stops
+stops_list[[2]] <- broad_sf
+
+mapview(stops_list)
+
+leaflet(clever_stops) %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addCircleMarkers()
+
+  test_join <- st_join(clever_stops, broad_sf)
+
 
 mapview(new_orleans[])
 nola_sf <- new_orleans %>% 
@@ -63,6 +84,7 @@ index <- st_buffer(broad, 1, endCapStyle = "FLAT") %>%
   st_contains(stops)
 
 mapview(test_stop)
+stop_times$stop_id %>% unique() %>% View()
 
 #Join everything to isolate the broad street stops
 nola =  select(routes, route_type, route_short_name,route_id) %>% 
