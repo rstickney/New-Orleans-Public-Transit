@@ -105,9 +105,10 @@ am_agg <-  ungroup(trial_am_test_join) %>%
             `Speed to Next Stop (Avg)` = mean(speed, na.rm = TRUE) %>% round(2)) %>%
   ungroup() %>%
   right_join(am_act) %>%
-  mutate(shape_dist_traveled = (shape_dist_traveled *0.621371) %>% round(2),
+  mutate(Direction = "INBOUND", 
+    shape_dist_traveled = (shape_dist_traveled *0.621371) %>% round(2),
          `Distance to Next Stop` = (lead(shape_dist_traveled) - shape_dist_traveled) %>% round(2)) %>%
-  select(`Stop ID` = stop.gtfs, `Stop Name`= stop_name, `Stop Sequence` = stop_sequence, `Total Activity`,
+  select(Direction, `Stop ID` = stop.gtfs, `Stop Name`= stop_name, `Stop Sequence` = stop_sequence, `Total Activity`,
          `Average Activity`, `Median Activity`, `Speed to Next Stop (Avg)`, `Speed to Next Stop (Med)`,
          `Distance to Next Stop`, `Distance Traveled` = shape_dist_traveled)
 
@@ -128,9 +129,10 @@ pm_agg <-  ungroup(trial_pm_test_join) %>%
     `Speed to Next Stop (Avg)` = mean(speed, na.rm = TRUE) %>% round(2)) %>%
   ungroup() %>%
   right_join(pm_act) %>%
-  mutate(shape_dist_traveled = (shape_dist_traveled *0.621371) %>% round(2),
+  mutate(Direction = "OUTBOUND", 
+         shape_dist_traveled = (shape_dist_traveled *0.621371) %>% round(2),
          `Distance to Next Stop` = (lead(shape_dist_traveled) - shape_dist_traveled) %>% round(2))  %>%
-  select(`Stop ID` = stop.gtfs, `Stop Name`= stop_name, `Stop Sequence` = stop_sequence, `Total Activity`,
+  select(Direction, `Stop ID` = stop.gtfs, `Stop Name`= stop_name, `Stop Sequence` = stop_sequence, `Total Activity`,
          `Average Activity`, `Median Activity`, `Speed to Next Stop (Avg)`, `Speed to Next Stop (Med)`,
          `Distance to Next Stop`, `Distance Traveled` = shape_dist_traveled)
 
@@ -154,17 +156,37 @@ pm_agg_sf <- pm_agg %>%
   st_as_sf(coords = c("stop_lon", "stop_lat"), crs = 4326)
 
 bike_lanes <- st_read("data/geo_export_d398f81d-a8b6-47a3-82ea-f1b5aa1ce614.shp")
+bike_reduced <- select(bike_lanes, facilityty)
+
+mapview(bike_reduced)
 #Create a polyline of where a bus lane can be added
 # what_we_created <- mapview() %>%
 #   mapedit::editMap()
 # 
 # mapview(what_we_created$finished)
-#Bus_lane_poss <- what_we_created$finished
+# Bus_lane_poss <- what_we_created$finished %>%
+#   mutate(`Possible Bus Route` = "Orleans St. to Press Drive") %>%
+#   select(`Possible Bus Route`, geometry)
 #write_sf(Bus_lane_poss, "94_bus_lane_option.shp")
 
-all_points <- list(am_agg_sf, pm_agg_sf, Bus_lane_poss, bike_lanes)
+
+
+all_points <- list(am_agg_sf, pm_agg_sf, Bus_lane_poss, bike_reduced)
 mapview(all_points)
 
 ##Have all of our points...now we need to actually create the map
+library(ggmap)
+library(ggplot2)
+library(ggspatial)
+
+library("rnaturalearth")
+library("rnaturalearthdata")
+world <- ne_countries(scale = "medium", returnclass = "sf")
+class(world)
+
+ggplot(data = world) +
+  geom_sf(data = am_agg_sf, size = sqrt(tot)) 
+
+glimpse(am_agg_sf)
 
 

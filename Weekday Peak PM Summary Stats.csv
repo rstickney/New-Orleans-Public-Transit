@@ -1,87 +1,87 @@
-Stop ID,Stop Name,Stop Sequence,Total Activity,Average Activity,Median Activity,Speed to Next Stop (Avg),Speed to Next Stop (Med),Distance to Next Stop,Distance Traveled
-638,Washington Ave. at S.Broad St.,1,406,6.06,5,30.31,32.59,0.15,0
-659,S. Broad at M L King,2,87,1.18,0,23.68,24.04,0.13,0.15
-4679,S. Broad at Erato,3,121,1.57,0,33.54,32.39,0.26,0.28
-4680,S. Broad at Overpass,4,25,0.32,0,26.46,26.63,0.35,0.54
-4681,S. Broad at Gravier,5,53,0.69,0,17.98,16.74,0.09,0.89
-4682,S. Broad at Tulane,6,400,5.19,5,28.35,27.92,0.1,0.98
-4683,S. Broad at Banks,7,97,1.24,1,18.37,16.5,0.22,1.08
-8295,S. Broad at Canal,8,1114,14.28,14,21.72,22.97,0.15,1.3
-4684,N. Broad at Bienville,9,118,1.53,1,22.8,23.85,0.14,1.45
-4685,N. Broad at St Louis,10,16,0.21,0,15.68,15.71,0.17,1.59
-4686,N. Broad at Orleans,11,106,1.36,1,22.42,23.51,0.12,1.76
-4687,N. Broad at Dumaine,12,80,1.03,1,14.11,12.14,0.15,1.88
-4688,N. Broad at Ursulines,13,52,0.68,0,17.51,17.19,0.19,2.03
-4689,N. Broad at Esplanade,14,170,2.21,2,13.42,11.13,0.14,2.22
-4690,N. Broad at Columbus,15,61,0.79,0,21.3,20.07,0.14,2.36
-4691,N. Broad at Lapeyrouse,16,97,1.26,1,26.64,25.01,0.14,2.5
-4692,N. Broad at D'Abadie,17,74,0.96,1,27.14,28.43,0.21,2.64
-8294,N. Broad at St Bernard,18,468,6.08,6,12.27,11.21,0.14,2.85
-4694,N. Broad at Duels,19,85,1.1,0,18.04,16.59,0.4,2.99
-4696,N. Broad at Treasure,20,42,0.55,0,33.12,31.75,0.15,3.39
-4697,Allen at Humanity,21,6,0.08,0,25.08,24.99,0.14,3.54
-2356,Allen at Lafreniere,22,27,0.35,0,19.74,19.83,0.16,3.68
-2212,Gentilly at St Anthony,23,55,0.71,0,23.58,20.86,0.09,3.84
-4700,Gentilly at Pauger,24,20,0.26,0,11.61,10.64,0.19,3.93
-4702,Gentilly at Foy,25,101,1.31,1,18.07,16.84,0.13,4.12
-8293,Gentilly at Elysian Fields (Nearside),26,184,2.39,1,23.89,23.69,0.06,4.25
-2357,Gentilly at Elysian Fields (Farside),27,189,2.42,2,28.99,23.76,0.07,4.31
-2358,Gentilly at Clermont,28,8,0.1,0,24.96,25.82,0.11,4.38
-4705,Gentilly at Clematis,29,39,0.51,0,31.07,31.7,0.09,4.49
-2360,Gentilly at St Roch,30,4,0.05,0,26.64,29.66,0.16,4.58
-2361,Gentilly at Iris,31,21,0.27,0,12.19,12.18,0.28,4.74
-2363,Gentilly at Lafaye,32,17,0.22,0,20.84,22.41,0.1,5.02
-4709,Gentilly at Aster,33,14,0.18,0,15.27,13.39,0.14,5.12
-4710,Chef Highway at Iroquois,34,43,0.56,0,18.26,18.29,0.24,5.26
-2366,Chef Highway at Press,35,112,1.45,1,16.01,13.69,0.09,5.5
-2355,Chef Menteur Blvd. at Gentilly Woods Mall,36,304,3.95,3,15.11,14.41,0.08,5.59
-8355,Chef Menteur Blvd. at Daiquiri Shop,37,9,0.12,0,9.28,8.17,0.08,5.67
-4120,Chef Menteur Blvd. at Louisa St.,38,463,6.01,5,21.31,22.91,0.15,5.75
-7714,Chef Menteur Blvd. at Desire Pkwy,39,158,2.03,1,17.76,21.03,0.86,5.9
-8292,Chef Highway at Downman,40,373,4.66,5,22.31,20.34,0.18,6.76
-2369,Chef Highway at Stemway,41,73,0.92,0,27.5,24.21,0.13,6.94
-2370,Chef Highway at Majestic Oaks,42,56,0.71,0,32.19,32.77,0.2,7.07
-2371,Chef Highway at Ray,43,7,0.09,0,23.79,23.31,0.13,7.27
-1699,Chef Highway at Dale,44,76,0.96,0,25.21,25.4,0.16,7.4
-2228,Chef Highway at Saint Paul's Church,45,5,0.06,0,23.26,24.31,0.1,7.56
-1701,Chef Highway at Chantilly,46,10,0.13,0,24.35,23.26,0.16,7.66
-1702,Chef Highway at Plum Orchard,47,99,1.25,1,29.92,28.88,0.14,7.82
-1703,Chef Highway at Lonely Oak,48,43,0.54,0,25.96,26.3,0.11,7.96
-1704,Chef Highway at Wilson,49,30,0.38,0,24.62,25.23,0.21,8.07
-1705,Chef Highway at 7743 Chef,50,26,0.33,0,25.18,28.12,0.14,8.28
-1706,Chef Highway at Pole 1093,51,80,1.01,0,20.97,20,0.06,8.42
-1707,Chef Highway at Eastview,52,24,0.3,0,30.83,32.82,0.14,8.48
-1708,Chef Highway at Laine,53,29,0.37,0,16.76,15.2,0.09,8.62
-1709,Chef Highway at Crowder,54,46,0.58,0,19.89,20.89,0.13,8.71
-1710,Chef Highway at Gawain,55,28,0.35,0,29.47,28.65,0.14,8.84
-1711,Chef Highway at Arthur,56,24,0.3,0,21.99,20.75,0.13,8.98
-1712,Chef Highway at Camelot,57,42,0.53,0,25.79,25.49,0.2,9.11
-1713,Chef Highway at Bundy,58,60,0.76,0,26.73,26.12,0.18,9.31
-1714,Chef Highway at Hickerson,59,34,0.43,0,30.12,28.65,0.14,9.49
-1715,Chef Highway at 9642 Chef,60,53,0.67,0,26.37,24.84,0.17,9.63
-1716,Chef Highway at Lurline,61,36,0.46,0,24.3,23.46,0.34,9.8
-1718,Chef Highway at Cardenas,62,11,0.23,0,35.51,35.92,0.13,10.14
-1719,Chef Highway at Schindler,63,12,0.26,0,31.18,34.32,0.09,10.27
-1720,Chef Highway at Good,64,14,0.3,0,30.79,27.66,0.14,10.36
-1721,Chef Highway at Papania,65,50,1.06,1,41.84,44.63,0.23,10.5
-1722,Chef Highway at Wright,66,11,0.23,0,41.99,42.82,0.25,10.73
-4742,Chef Highway at Sherwood,67,7,0.15,0,35.09,35.54,0.25,10.98
-1840,Chef Highway at Bullard,68,4,0.09,0,35.4,33.72,0.99,11.23
-1841,Chef Highway at Spur Station,69,1,0.02,0,45.62,48.42,0.12,12.22
-4745,Chef Highway at Computer Center,70,6,0.13,0,22.19,22.19,0.45,12.34
-2383,Michoud at Carriere Court 1,71,0,0,0,28.71,28.11,0.13,12.79
-2384,Michoud at Carriere Court 2,72,1,0.03,0,34.78,36.04,0.19,12.92
-2385,Michoud at Reserve Center,73,0,0,0,29.21,30.34,0.11,13.11
-2386,Michoud at Old Gentilly,74,0,0,0,19.11,18.96,0.41,13.22
-2387,Old Gentilly at Agriculture Building,75,0,0,0,29.49,30.36,0.14,13.63
-2388,NASA,76,0,0,0,40.83,42.82,0.92,13.77
-2221,Folgers Coffee Plant,77,0,0,0,21.42,21.43,0.42,14.69
-2222,Gulfway Terrace Apartments,78,23,0.72,0,28.75,26.83,0.14,15.11
-8077,Chef Highway at 14551 Chef,79,6,0.19,0,24.19,25.18,0.14,15.25
-8290,Chef Highway at Alcee Fortier,80,102,3.19,2,32.71,36.16,0.13,15.39
-2233,Chef at Dong Phuong,81,2,0.06,0,39.05,40.48,0.24,15.52
-2234,Chef Garden Apartments,82,0,0,0,42.27,44.96,0.37,15.76
-2235,Orleans East Apartments,83,0,0,0,43.87,41.86,0.09,16.13
-2236,Opposite Maison Orleans Two,84,0,0,0,24.42,27.14,0.18,16.22
-8075,Chef Highway at Michoud (Nearside),85,48,1.6,0.5,11.42,9.57,0.05,16.4
-8622,Michoud at Chef Menteur Highway,86,126,2.57,1,NA,NA,NA,16.45
+Direction,Stop ID,Stop Name,Stop Sequence,Total Activity,Average Activity,Median Activity,Speed to Next Stop (Avg),Speed to Next Stop (Med),Distance to Next Stop,Distance Traveled
+OUTBOUND,638,Washington Ave. at S.Broad St.,1,406,6.06,5,30.31,32.59,0.15,0
+OUTBOUND,659,S. Broad at M L King,2,87,1.18,0,23.68,24.04,0.13,0.15
+OUTBOUND,4679,S. Broad at Erato,3,121,1.57,0,33.54,32.39,0.26,0.28
+OUTBOUND,4680,S. Broad at Overpass,4,25,0.32,0,26.46,26.63,0.35,0.54
+OUTBOUND,4681,S. Broad at Gravier,5,53,0.69,0,17.98,16.74,0.09,0.89
+OUTBOUND,4682,S. Broad at Tulane,6,400,5.19,5,28.35,27.92,0.1,0.98
+OUTBOUND,4683,S. Broad at Banks,7,97,1.24,1,18.37,16.5,0.22,1.08
+OUTBOUND,8295,S. Broad at Canal,8,1114,14.28,14,21.72,22.97,0.15,1.3
+OUTBOUND,4684,N. Broad at Bienville,9,118,1.53,1,22.8,23.85,0.14,1.45
+OUTBOUND,4685,N. Broad at St Louis,10,16,0.21,0,15.68,15.71,0.17,1.59
+OUTBOUND,4686,N. Broad at Orleans,11,106,1.36,1,22.42,23.51,0.12,1.76
+OUTBOUND,4687,N. Broad at Dumaine,12,80,1.03,1,14.11,12.14,0.15,1.88
+OUTBOUND,4688,N. Broad at Ursulines,13,52,0.68,0,17.51,17.19,0.19,2.03
+OUTBOUND,4689,N. Broad at Esplanade,14,170,2.21,2,13.42,11.13,0.14,2.22
+OUTBOUND,4690,N. Broad at Columbus,15,61,0.79,0,21.3,20.07,0.14,2.36
+OUTBOUND,4691,N. Broad at Lapeyrouse,16,97,1.26,1,26.64,25.01,0.14,2.5
+OUTBOUND,4692,N. Broad at D'Abadie,17,74,0.96,1,27.14,28.43,0.21,2.64
+OUTBOUND,8294,N. Broad at St Bernard,18,468,6.08,6,12.27,11.21,0.14,2.85
+OUTBOUND,4694,N. Broad at Duels,19,85,1.1,0,18.04,16.59,0.4,2.99
+OUTBOUND,4696,N. Broad at Treasure,20,42,0.55,0,33.12,31.75,0.15,3.39
+OUTBOUND,4697,Allen at Humanity,21,6,0.08,0,25.08,24.99,0.14,3.54
+OUTBOUND,2356,Allen at Lafreniere,22,27,0.35,0,19.74,19.83,0.16,3.68
+OUTBOUND,2212,Gentilly at St Anthony,23,55,0.71,0,23.58,20.86,0.09,3.84
+OUTBOUND,4700,Gentilly at Pauger,24,20,0.26,0,11.61,10.64,0.19,3.93
+OUTBOUND,4702,Gentilly at Foy,25,101,1.31,1,18.07,16.84,0.13,4.12
+OUTBOUND,8293,Gentilly at Elysian Fields (Nearside),26,184,2.39,1,23.89,23.69,0.06,4.25
+OUTBOUND,2357,Gentilly at Elysian Fields (Farside),27,189,2.42,2,28.99,23.76,0.07,4.31
+OUTBOUND,2358,Gentilly at Clermont,28,8,0.1,0,24.96,25.82,0.11,4.38
+OUTBOUND,4705,Gentilly at Clematis,29,39,0.51,0,31.07,31.7,0.09,4.49
+OUTBOUND,2360,Gentilly at St Roch,30,4,0.05,0,26.64,29.66,0.16,4.58
+OUTBOUND,2361,Gentilly at Iris,31,21,0.27,0,12.19,12.18,0.28,4.74
+OUTBOUND,2363,Gentilly at Lafaye,32,17,0.22,0,20.84,22.41,0.1,5.02
+OUTBOUND,4709,Gentilly at Aster,33,14,0.18,0,15.27,13.39,0.14,5.12
+OUTBOUND,4710,Chef Highway at Iroquois,34,43,0.56,0,18.26,18.29,0.24,5.26
+OUTBOUND,2366,Chef Highway at Press,35,112,1.45,1,16.01,13.69,0.09,5.5
+OUTBOUND,2355,Chef Menteur Blvd. at Gentilly Woods Mall,36,304,3.95,3,15.11,14.41,0.08,5.59
+OUTBOUND,8355,Chef Menteur Blvd. at Daiquiri Shop,37,9,0.12,0,9.28,8.17,0.08,5.67
+OUTBOUND,4120,Chef Menteur Blvd. at Louisa St.,38,463,6.01,5,21.31,22.91,0.15,5.75
+OUTBOUND,7714,Chef Menteur Blvd. at Desire Pkwy,39,158,2.03,1,17.76,21.03,0.86,5.9
+OUTBOUND,8292,Chef Highway at Downman,40,373,4.66,5,22.31,20.34,0.18,6.76
+OUTBOUND,2369,Chef Highway at Stemway,41,73,0.92,0,27.5,24.21,0.13,6.94
+OUTBOUND,2370,Chef Highway at Majestic Oaks,42,56,0.71,0,32.19,32.77,0.2,7.07
+OUTBOUND,2371,Chef Highway at Ray,43,7,0.09,0,23.79,23.31,0.13,7.27
+OUTBOUND,1699,Chef Highway at Dale,44,76,0.96,0,25.21,25.4,0.16,7.4
+OUTBOUND,2228,Chef Highway at Saint Paul's Church,45,5,0.06,0,23.26,24.31,0.1,7.56
+OUTBOUND,1701,Chef Highway at Chantilly,46,10,0.13,0,24.35,23.26,0.16,7.66
+OUTBOUND,1702,Chef Highway at Plum Orchard,47,99,1.25,1,29.92,28.88,0.14,7.82
+OUTBOUND,1703,Chef Highway at Lonely Oak,48,43,0.54,0,25.96,26.3,0.11,7.96
+OUTBOUND,1704,Chef Highway at Wilson,49,30,0.38,0,24.62,25.23,0.21,8.07
+OUTBOUND,1705,Chef Highway at 7743 Chef,50,26,0.33,0,25.18,28.12,0.14,8.28
+OUTBOUND,1706,Chef Highway at Pole 1093,51,80,1.01,0,20.97,20,0.06,8.42
+OUTBOUND,1707,Chef Highway at Eastview,52,24,0.3,0,30.83,32.82,0.14,8.48
+OUTBOUND,1708,Chef Highway at Laine,53,29,0.37,0,16.76,15.2,0.09,8.62
+OUTBOUND,1709,Chef Highway at Crowder,54,46,0.58,0,19.89,20.89,0.13,8.71
+OUTBOUND,1710,Chef Highway at Gawain,55,28,0.35,0,29.47,28.65,0.14,8.84
+OUTBOUND,1711,Chef Highway at Arthur,56,24,0.3,0,21.99,20.75,0.13,8.98
+OUTBOUND,1712,Chef Highway at Camelot,57,42,0.53,0,25.79,25.49,0.2,9.11
+OUTBOUND,1713,Chef Highway at Bundy,58,60,0.76,0,26.73,26.12,0.18,9.31
+OUTBOUND,1714,Chef Highway at Hickerson,59,34,0.43,0,30.12,28.65,0.14,9.49
+OUTBOUND,1715,Chef Highway at 9642 Chef,60,53,0.67,0,26.37,24.84,0.17,9.63
+OUTBOUND,1716,Chef Highway at Lurline,61,36,0.46,0,24.3,23.46,0.34,9.8
+OUTBOUND,1718,Chef Highway at Cardenas,62,11,0.23,0,35.51,35.92,0.13,10.14
+OUTBOUND,1719,Chef Highway at Schindler,63,12,0.26,0,31.18,34.32,0.09,10.27
+OUTBOUND,1720,Chef Highway at Good,64,14,0.3,0,30.79,27.66,0.14,10.36
+OUTBOUND,1721,Chef Highway at Papania,65,50,1.06,1,41.84,44.63,0.23,10.5
+OUTBOUND,1722,Chef Highway at Wright,66,11,0.23,0,41.99,42.82,0.25,10.73
+OUTBOUND,4742,Chef Highway at Sherwood,67,7,0.15,0,35.09,35.54,0.25,10.98
+OUTBOUND,1840,Chef Highway at Bullard,68,4,0.09,0,35.4,33.72,0.99,11.23
+OUTBOUND,1841,Chef Highway at Spur Station,69,1,0.02,0,45.62,48.42,0.12,12.22
+OUTBOUND,4745,Chef Highway at Computer Center,70,6,0.13,0,22.19,22.19,0.45,12.34
+OUTBOUND,2383,Michoud at Carriere Court 1,71,0,0,0,28.71,28.11,0.13,12.79
+OUTBOUND,2384,Michoud at Carriere Court 2,72,1,0.03,0,34.78,36.04,0.19,12.92
+OUTBOUND,2385,Michoud at Reserve Center,73,0,0,0,29.21,30.34,0.11,13.11
+OUTBOUND,2386,Michoud at Old Gentilly,74,0,0,0,19.11,18.96,0.41,13.22
+OUTBOUND,2387,Old Gentilly at Agriculture Building,75,0,0,0,29.49,30.36,0.14,13.63
+OUTBOUND,2388,NASA,76,0,0,0,40.83,42.82,0.92,13.77
+OUTBOUND,2221,Folgers Coffee Plant,77,0,0,0,21.42,21.43,0.42,14.69
+OUTBOUND,2222,Gulfway Terrace Apartments,78,23,0.72,0,28.75,26.83,0.14,15.11
+OUTBOUND,8077,Chef Highway at 14551 Chef,79,6,0.19,0,24.19,25.18,0.14,15.25
+OUTBOUND,8290,Chef Highway at Alcee Fortier,80,102,3.19,2,32.71,36.16,0.13,15.39
+OUTBOUND,2233,Chef at Dong Phuong,81,2,0.06,0,39.05,40.48,0.24,15.52
+OUTBOUND,2234,Chef Garden Apartments,82,0,0,0,42.27,44.96,0.37,15.76
+OUTBOUND,2235,Orleans East Apartments,83,0,0,0,43.87,41.86,0.09,16.13
+OUTBOUND,2236,Opposite Maison Orleans Two,84,0,0,0,24.42,27.14,0.18,16.22
+OUTBOUND,8075,Chef Highway at Michoud (Nearside),85,48,1.6,0.5,11.42,9.57,0.05,16.4
+OUTBOUND,8622,Michoud at Chef Menteur Highway,86,126,2.57,1,NA,NA,NA,16.45
