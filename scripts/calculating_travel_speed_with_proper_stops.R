@@ -174,10 +174,11 @@ mapview(bike_reduced)
 all_points <- list(am_agg_sf, pm_agg_sf, Bus_lane_poss, bike_reduced)
 mapview(all_points)
 
-##Have all of our points...now we need to actually create the map
+##Have all of our points...now we need to actually create the (static) map
 library(ggmap)
 library(ggplot2)
 library(ggspatial)
+library(tmap)
 
 library("rnaturalearth")
 library("rnaturalearthdata")
@@ -187,6 +188,23 @@ class(world)
 ggplot(data = world) +
   geom_sf(data = am_agg_sf, size = sqrt(tot)) 
 
-glimpse(am_agg_sf)
+am_pm <- rbind(am_agg_sf, pm_agg_sf) %>%
+  mutate(`Total Activity` = sqrt(`Total Activity`))
+
+am_agg_sf$size <- sqrt(am_agg_sf$`Total Activity`)
+tm_basemap(" CartoDB.Positron") +
+tm_shape() +
+  tm_dots(col = "Direction", palette = "YlOrBr", size = "Total Activity") +
+  tm_polygons(Bus_lane_poss) +
+  tm_layout(title = "Broad St. Bus Line")
+?tm_basemap
+
+ggplot(data = am_pm) + 
+  geom_sf() +
+  geom_sf(data = am_pm, aes(size = am_pm$`Total Activity`, color = am_pm$Direction)) +
+  geom_jitter()
+  geom_polygon(data = Bus_lane_poss)
+?geom_sf
+
 
 
