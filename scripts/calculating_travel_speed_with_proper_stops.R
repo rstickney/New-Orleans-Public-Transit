@@ -56,31 +56,68 @@ trial_am_test_join <- trial %>%
          !is.na(TIME_ACTUAL_ARRIVE)) %>% #~500 from the parameters we're looking at have blank arrival times
   left_join(broad_inbound) %>%#There are ~11 stops that can't be accounted for in terms of why 
                            #they're not in the GTFS feed
+  unique() %>%
   filter(!is.na(lat)) %>%
   group_by(SERIAL_NUMBER)  %>%#Create groups within the DF--serial_number is a unique trip  
-  mutate(diff = if_else(activity > 0,  #Conditional added in to adjust for when there are no passengers
+  mutate(shape_dist_traveled = if_else(is.na(shape_dist_traveled), 0, shape_dist_traveled),
+    diff = if_else(activity > 0,  #Conditional added in to adjust for when there are no passengers
                         difftime(lead(taa2, default = first(taa2)), tad2),
                         difftime(lead(taa2, default = first(taa2)), taa2)) %>% as.numeric(),
-         dist = shape_dist_traveled - lag(shape_dist_traveled),
-         speed = (dist*0.621371)/((diff %>% as.numeric())/3600))
-        
-table(trial_am_test_join$stop_name, trial_am_test_join$diff) %>%
-  as.data.frame() %>%
-  filter(Freq > 0) %>%
-    View()
+         dist = (lead(shape_dist_traveled)-shape_dist_traveled),
+         speed = (dist*0.621371)/((diff %>% as.numeric())/3600)) %>%
+  ungroup() %>%
+  hablar::rationalize()
 
-glimpse(trial_am_test_join)
-  glimpse(broad_inbound)
-missing <- filter(trial_am_test_join, is.na(lat)) %>%
-  select(MAIN_CROSS_STREET, activity, SORT_ORDER, TRIP_START_TIME, taa2, tad2, STOP_ID )
-
-
-trial_am$activity %>% 
+trial_pm_test_join <- trial %>%
+  filter(TIME_PERIOD == "PM Peak", DIRECTION_NAME == "OUTBOUND", SERVICE_PERIOD == "Weekday",
+         !is.na(TIME_ACTUAL_ARRIVE)) %>% #~500 from the parameters we're looking at have blank arrival times
+  left_join(broad_outbound) %>%#There are ~11 stops that can't be accounted for in terms of why 
+  #they're not in the GTFS feed
+  unique() %>%
+  filter(!is.na(lat)) %>%
   group_by(SERIAL_NUMBER)  %>%#Create groups within the DF--serial_number is a unique trip  
-  mutate(diff = if_else(activity > 0,  #Conditional added in to adjust for when there are no passengers
+  mutate(shape_dist_traveled = if_else(is.na(shape_dist_traveled), 0, shape_dist_traveled),
+         diff = if_else(activity > 0,  #Conditional added in to adjust for when there are no passengers
                         difftime(lead(taa2, default = first(taa2)), tad2),
                         difftime(lead(taa2, default = first(taa2)), taa2)) %>% as.numeric(),
-         speed = SEGMENT_MILES/((diff %>% as.numeric())/3600))
+         dist = (lead(shape_dist_traveled)-shape_dist_traveled),
+         speed = (dist*0.621371)/((diff %>% as.numeric())/3600)) %>%
+  ungroup() %>%
+  hablar::rationalize() #Replaces Inf with NAs
 
-glimpse(trial_am)
+####Grouping the results
+#Using medians and averages as there a number of outliers 
+am_agg <- ungroup(trial_am_test_join) %>%
+  select(stop_sequence, shape_dist_traveled, stop.gtfs, stop_name, PASSENGERS_ON, PASSENGERS_OFF, activity, speed) %>%
+  group_by(stop_sequence, stop.gtfs, shape_dist_traveled, stop_name) %>%
+  summarise(`Total Activity` = sum(activity, na.rm = TRUE),
+            `Median Activity` = median(activity, na.rm = TRUE),
+            `Average Activity` = mean(activity, na.rm = TRUE) %>% round(2),
+            `Speed to Next Stop (Med)` = median(speed, na.rm = TRUE) %>% round(2),
+            `Speed to Next Stop (Avg)` = mean(speed, na.rm = TRUE) %>% round(2)) %>%
+  ungroup() %>%
+  mutate(shape_dist_traveled = (shape_dist_traveled *0.621371) %>% round(2),
+         `Distance to Next Stop` = lead(shape_dist_traveled) - shape_dist_traveled) %>%
+  select(`Stop ID` = stop.gtfs, `Stop Name`= stop_name, `Stop Sequence` = stop_sequence, `Total Activity`,
+         `Median Activity`, `Average Activity`, `Speed to Next Stop (Avg)`, `Speed to Next Stop (Med)`,
+         `Distance to Next Stop`, `Distance Traveled` = shape_dist_traveled)
 
+pm_agg <- ungroup(trial_pm_test_join) %>%
+  select(stop_sequence, shape_dist_traveled, stop.gtfs, stop_name, PASSENGERS_ON, PASSENGERS_OFF, activity, speed) %>%
+  group_by(stop_sequence, stop.gtfs, shape_dist_traveled, stop_name) %>%
+  summarise(`Total Activity` = sum(activity, na.rm = TRUE),
+            `Median Activity` = median(activity, na.rm = TRUE),
+            `Average Activity` = mean(activity, na.rm = TRUE) %>% round(2),
+            `Speed to Next Stop (Med)` = median(speed, na.rm = TRUE) %>% round(2),
+            `Speed to Next Stop (Avg)` = mean(speed, na.rm = TRUE) %>% round(2)) %>%
+  ungroup() %>%
+  mutate(shape_dist_traveled = (shape_dist_traveled *0.621371) %>% round(2),
+         `Distance to Next Stop` = lead(shape_dist_traveled) - shape_dist_traveled) %>%
+  select(`Stop ID` = stop.gtfs, `Stop Name`= stop_name, `Stop Sequence` = stop_sequence, `Total Activity`,
+         `Median Activity`, `Average Activity`, `Speed to Next Stop (Avg)`, `Speed to Next Stop (Med)`,
+         `Distance to Next Stop`, `Distance Traveled` = shape_dist_traveled)
+
+write_csv(am_agg, "Weekday Peak AM Summary Stats.csv")
+write_csv(pm_agg, "Weekday Peak PM Summary Stats.csv")
+
+###Create maps for these points
