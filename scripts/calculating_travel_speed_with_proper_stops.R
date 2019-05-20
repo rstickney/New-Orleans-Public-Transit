@@ -20,6 +20,12 @@ library(leaflet)
 new_orleans <- read_gtfs("data//norta.zip", 
                          local = TRUE) 
 
+route_geom <- get_route_geometry(new_orleans)
+route_named <- route_geom %>%#st_set_geometry(route_geom, NULL)
+  left_join(select(routes, route_short_name, route_long_name, route_id))
+other_routes <- filter(route_named, route_long_name != "Broad") %>%
+select(`Route ID` = route_short_name, `Route Name` = route_long_name) 
+
 ##Will manually compare the clever stops and the GTFS stops
 clever_stops <- read_csv("data//clever_94_stops_clean.csv") %>%
   na.omit() %>%
@@ -136,11 +142,6 @@ pm_agg <-  ungroup(trial_pm_test_join) %>%
          `Average Activity`, `Median Activity`, `Speed to Next Stop (Avg)`, `Speed to Next Stop (Med)`,
          `Distance to Next Stop`, `Distance Traveled` = shape_dist_traveled)
 
-filt_pm <- sum(pm_agg$`Total Activity`)
-filt_am <- sum(am_agg$`Total Activity`)
-
-filt_am/6816
-filt_pm/7124
 
 write_csv(am_agg, "Weekday Peak AM Summary Stats.csv")
 write_csv(pm_agg, "Weekday Peak PM Summary Stats.csv")
@@ -158,7 +159,6 @@ pm_agg_sf <- pm_agg %>%
 bike_lanes <- st_read("data/geo_export_d398f81d-a8b6-47a3-82ea-f1b5aa1ce614.shp")
 bike_reduced <- select(bike_lanes, facilityty)
 
-mapview(bike_reduced)
 #Create a polyline of where a bus lane can be added
 # what_we_created <- mapview() %>%
 #   mapedit::editMap()
@@ -168,10 +168,12 @@ mapview(bike_reduced)
 #   mutate(`Possible Bus Route` = "Orleans St. to Press Drive") %>%
 #   select(`Possible Bus Route`, geometry)
 #write_sf(Bus_lane_poss, "94_bus_lane_option.shp")
+Bus_lane_poss <- st_read("94_bus_lane_option.shp") %>%
+     mutate(`Possible Bus Route` = "Orleans St. to Press Drive") %>%
+     select(`Possible Bus Route`, geometry)
 
 
-
-all_points <- list(am_agg_sf, pm_agg_sf, Bus_lane_poss, bike_reduced)
+all_points <- list(am_agg_sf, pm_agg_sf, Bus_lane_poss, other_routes, bike_reduced)
 mapview(all_points)
 
 ##Have all of our points...now we need to actually create the (static) map
@@ -209,3 +211,5 @@ ggplot(data = am_pm) +
 write_sf(am_pm, "shape files/inbound_outbound_stats.shp")
 write_sf(Bus_lane_poss, "shape files/possible_bus_lane.shp")
 write_sf(bike_reduced, "shape files/bike_lanes.shp")
+
+
