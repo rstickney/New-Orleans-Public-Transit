@@ -175,6 +175,7 @@ Bus_lane_poss <- st_read("94_bus_lane_option.shp") %>%
 
 
 all_points <- list(am_agg_sf, pm_agg_sf, Bus_lane_poss, other_routes, bike_reduced)
+names(all_points) <- c("AM Peak Inbound", "PM Peak Outbound", "Possible Bus Lane", "Other Transit Routes", "Existing Bike Lanes")
 mapview(all_points)
 
 ##Have all of our points...now we need to actually create the (static) map
