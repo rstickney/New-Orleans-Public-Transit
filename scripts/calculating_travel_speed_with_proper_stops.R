@@ -188,7 +188,7 @@ class(world)
 ggplot(data = world) +
   geom_sf(data = am_agg_sf, size = sqrt(tot)) 
 
-am_pm <- rbind(am_agg_sf, pm_agg_sf) %>%
+am_pm <- rbind(am_agg_sf, pm_agg_sf) 
   mutate(`Total Activity` = sqrt(`Total Activity`))
 
 am_agg_sf$size <- sqrt(am_agg_sf$`Total Activity`)
@@ -206,5 +206,6 @@ ggplot(data = am_pm) +
   geom_polygon(data = Bus_lane_poss)
 ?geom_sf
 
-
-
+write_sf(am_pm, "shape files/inbound_outbound_stats.shp")
+write_sf(Bus_lane_poss, "shape files/possible_bus_lane.shp")
+write_sf(bike_reduced, "shape files/bike_lanes.shp")
