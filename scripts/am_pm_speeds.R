@@ -55,7 +55,7 @@ trial <- filter(broad, TIMEPOINT == 0) %>% #Filter out timepoints that are -1, a
          tad2 = tf(TIME_ACTUAL_DEPART, SURVEY_DATE),
          activity = PASSENGERS_OFF + PASSENGERS_ON,
          stop_id = as.character(STOP_ID))
-glimpse(stop_ids)
+
 ##Use mutate to create multiple variables at once
 #When bus arrives to an actual scheduled stop, there time 
 trial_am <- trial %>%
@@ -76,7 +76,6 @@ trial_pm <- trial %>%
                         difftime(lead(taa2, default = first(taa2)), taa2)) %>% as.numeric(),
          speed = SEGMENT_MILES/((diff %>% as.numeric())/3600))
          
-
 ###Aggregating the boarding and travel time info--method works very quickly and well
 #need to investigate the negative travel tiems on it and get a better sense of the data
 #Until then convert it into NAs where appropriate
@@ -101,13 +100,12 @@ pm_agg <- ungroup(trial_pm) %>%
 
 am_agg_sf <- am_agg %>%
   inner_join(filter(stop_ids, Direction == "INBOUND")) %>%
+  mutate(Direction = "INBOUND") %>%
   st_as_sf(coords = c("Longitude", "Latitude")) 
 
-am_agg_sf %>%
-  mapview()
-glimpse(stop_ids)
 pm_agg_sf <- pm_agg %>%
   inner_join(filter(stop_ids, Direction == "OUTBOUND")) %>%
+  mutate(Direction = "INBOUND") %>%
   st_as_sf(coords = c("Longitude", "Latitude")) %>%
   unique()
 
