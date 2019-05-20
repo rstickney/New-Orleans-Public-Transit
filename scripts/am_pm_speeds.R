@@ -15,26 +15,6 @@ stop_ids <- read_csv("data/clever_94_stops_tt_id.csv") %>%
 broad <- read_xlsx("data/RT94.xlsx") %>%
   mutate(stop.clever = STOP_ID %>% as.numeric()) %>%
   left_join(select(stop_ids, stop.id, stop.gtfs))
-
-select(broad, STOP_ID, MAIN_CROSS_STREET) %>%
-  unique() %>%
-  View()
-
-broad %>%
-  select(SORT_ORDER, STOP_ID, MAIN_CROSS_STREET, DIRECTION_NAME) %>%
-  unique() %>%
-  View()
-  
-
-filter(broad, DIRECTION_NAME == "INBOUND") %>%
-  select(SORT_ORDER, STOP_ID, MAIN_CROSS_STREET) %>%
-  unique() %>%
-  write_csv("clever_stops_inbound.csv")
-
-filter(broad, DIRECTION_NAME == "OUTBOUND") %>%
-  select(SORT_ORDER, STOP_ID, MAIN_CROSS_STREET) %>%
-  unique() %>%
-  write_csv("clever_stops_outbound.csv")
 ##Clean up the time-stamp data (currently adds in a date due to it being done in excel); 
 #convert to a time object
 
@@ -47,6 +27,7 @@ tf <- function(x, y){
 
 #Remove excess variables to start:
 #Keep:
+  # -stop.gtfs
   # -SURVEY_DATE
   # -SERVICE_PERIOD
   # -TIME_PERIOD
@@ -65,7 +46,7 @@ tf <- function(x, y){
 summary(broad)
 trial <- filter(broad, TIMEPOINT == 0) %>% #Filter out timepoints that are -1, as they are false
                                           #(there is some type of error in clever...)
-  select(SERIAL_NUMBER, SORT_ORDER, SURVEY_DATE, SERVICE_PERIOD, TIME_PERIOD, TRIP_START_TIME,
+  select(stop.gtfs, SERIAL_NUMBER, SORT_ORDER, SURVEY_DATE, SERVICE_PERIOD, TIME_PERIOD, TRIP_START_TIME,
                 DIRECTION_NAME, ROUTE_NUMBER, STOP_ID, MAIN_CROSS_STREET, SEGMENT_MILES,
                 TIME_SCHEDULED, TIME_ACTUAL_ARRIVE, TIME_ACTUAL_DEPART,
                 PASSENGERS_ON, PASSENGERS_OFF, PASSENGERS_SPOT) %>%
@@ -74,7 +55,7 @@ trial <- filter(broad, TIMEPOINT == 0) %>% #Filter out timepoints that are -1, a
          tad2 = tf(TIME_ACTUAL_DEPART, SURVEY_DATE),
          activity = PASSENGERS_OFF + PASSENGERS_ON,
          stop_id = as.character(STOP_ID))
-
+glimpse(stop_ids)
 ##Use mutate to create multiple variables at once
 #When bus arrives to an actual scheduled stop, there time 
 trial_am <- trial %>%
@@ -95,12 +76,6 @@ trial_pm <- trial %>%
                         difftime(lead(taa2, default = first(taa2)), taa2)) %>% as.numeric(),
          speed = SEGMENT_MILES/((diff %>% as.numeric())/3600))
          
-examine <- filter(trial_am, SERIAL_NUMBER == 831629 | 
-         SERIAL_NUMBER == 834981 | 
-         SERIAL_NUMBER == 836333)  
-range(trial_am$diff)
-range(trial_pm$diff)
-
 
 ###Aggregating the boarding and travel time info--method works very quickly and well
 #need to investigate the negative travel tiems on it and get a better sense of the data
@@ -110,13 +85,33 @@ trial_am <- trial_am %>%
   naniar::replace_with_na(replace = list(diff = 0))
 
 
-test_agg <- ungroup(trial_am) %>%
+am_agg <- ungroup(trial_am) %>%
   select(SORT_ORDER, stop_id, MAIN_CROSS_STREET, PASSENGERS_ON, PASSENGERS_OFF, activity, diff) %>%
   group_by(SORT_ORDER, stop_id, MAIN_CROSS_STREET) %>%
   summarise(mean_activity = sum(activity, na.rm = TRUE),
-            mean_diff = mean(diff, na.rm = TRUE))
+            mean_diff = mean(diff, na.rm = TRUE)) %>%
+  mutate(stop.clever = as.numeric(stop_id))
 
+pm_agg <- ungroup(trial_pm) %>%
+  select(SORT_ORDER, stop_id, MAIN_CROSS_STREET, PASSENGERS_ON, PASSENGERS_OFF, activity, diff) %>%
+  group_by(SORT_ORDER, stop_id, MAIN_CROSS_STREET) %>%
+  summarise(mean_activity = sum(activity, na.rm = TRUE),
+            mean_diff = mean(diff, na.rm = TRUE)) %>%
+  mutate(stop.clever = as.numeric(stop_id))
 
+am_agg_sf <- am_agg %>%
+  inner_join(filter(stop_ids, Direction == "INBOUND")) %>%
+  st_as_sf(coords = c("Longitude", "Latitude")) 
+
+am_agg_sf %>%
+  mapview()
+glimpse(stop_ids)
+pm_agg_sf <- pm_agg %>%
+  inner_join(filter(stop_ids, Direction == "OUTBOUND")) %>%
+  st_as_sf(coords = c("Longitude", "Latitude")) %>%
+  unique()
+
+glimpse(stop_ids)
 ##Can clearly see that the stop IDs don't match up with the ones from Arrival time data
 test_merge <- stops_sf %>%
   merge(test_agg) %>%
