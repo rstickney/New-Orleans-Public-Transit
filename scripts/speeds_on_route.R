@@ -15,6 +15,9 @@ stop_ids <- read_csv("data/clever_94_stops_tt_id.csv") %>%
 broad <- read_xlsx("data/RT94.xlsx") %>%
   mutate(stop.clever = STOP_ID %>% as.numeric()) %>%
   left_join(select(stop_ids, stop.clever, stop.gtfs))
+
+
+
 ##Clean up the time-stamp data (currently adds in a date due to it being done in excel); 
 #convert to a time object
 
@@ -63,11 +66,12 @@ broad_inbound <- filter(broad_trips, shape_id == 52747) %>%
   select(-arrival_time)
 broad_outbound <- filter(broad_trips, shape_id == 52748) %>%
   select(-arrival_time)
-glimpse(broad_inbound)
+
 broad_outbound %>%
   select(stop_id, stop_sequence, shape_dist_traveled, stop_name) %>%
   unique() %>%
   View()
+
 glimpse(broad_inbound)
 table(broad_inbound$stop_sequence) %>%
   View()

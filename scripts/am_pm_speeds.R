@@ -116,17 +116,12 @@ test_merge <- stops_sf %>%
   select(stop_id, stop_name, MAIN_CROSS_STREET)
 
 
-glimpse(test_merge)
-
-
 sum(test_agg$mean_diff, na.rm = TRUE) #Seems to be a reasonable total travel time
 trial_am <- trial_am %>%
   mutate(diff = if_else(diff <0 , 0, diff)) %>%
   naniar::replace_with_na(replace = list(diff = 0))
 
 
-
-?naniar::replace_with_na_if
 trial_agg <- trial_am %>%
   group_by(SERIAL_NUMBER) %>%
   summarise((diff2 = if_else(activity > 0,  #Conditional added in to adjust for when there are no passengers

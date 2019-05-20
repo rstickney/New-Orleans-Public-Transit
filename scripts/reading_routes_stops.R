@@ -93,30 +93,22 @@ stop_times$stop_id %>% unique() %>% View()
 
 #Join everything to isolate the broad street stops
 nola =  select(routes, route_type, route_short_name,route_id) %>% 
-  inner_join(select(trips, route_id, trip_id)) %>% 
+  inner_join(select(trips, route_id, trip_id, shape_id)) %>% 
   inner_join(select(stop_times, trip_id, stop_id, stop_sequence, shape_dist_traveled)) %>% 
   select(-trip_id) %>% unique() %>% 
-  inner_join(select(stops, stop_id, stop_name, lat=stop_lat, lon=stop_lon)) %>% 
-  unique()
+  inner_join(select(stops, stop_id, stop_name, stop_desc, lat=stop_lat, lon=stop_lon)) %>%
+  unique() %>%
+  mutate(stop.gtfs = as.numeric(stop_id)) %>%
+  select(route_short_name, shape_id, stop.gtfs, stop_sequence, shape_dist_traveled,
+         stop_name, stop_desc, stop_name, lat, lon)
 
+broad_sf <- filter(nola, route_short_name == "94") 
 
+broad_inbound <- filter(broad_sf, shape_id == 52747)
 
-broad_sf <- filter(nola, route_short_name == "94") %>%
-  inner_join(stops_sf) %>%
-  st_as_sf()
+broad_outbound <- filter(broad_sf, shape_id == 52748)
 
-test_am <- filter(trial_am, SERIAL_NUMBER == 813191)
-test_join <-  merge(broad_sf, test_am)
-mapview(test_join)
-
-compare_stops <- data.frame, 
-
-sf_stops <- unique(broad_sf$stop_id) %>% as.data.frame()
-am_stops <- unique(test_am$stop_id) %>% as.data.frame()
-
-match <- inner_join(sf_stops, am_stops)
-View(sf_stops)
-View(am_stops)
+glimpse(broad_inbound)
 #When you pass a list of sf objects to mapview it makes them layers you can manipulate
 broad_all <- list()
 broad_all[[1]] <- broad
