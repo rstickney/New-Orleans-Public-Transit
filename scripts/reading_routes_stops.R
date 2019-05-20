@@ -21,11 +21,11 @@ new_orleans <- read_gtfs("data//norta.zip",
                          local = TRUE) %>%
   gtfs_as_sf()
 
-
 ##Will manually compare the clever stops and the GTFS stops
 clever_stops <- read_csv("data//clever_94_stops_clean.csv") %>%
   na.omit() %>%
   st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326)
+
 st_crs(clever_stops)
 stops_list <- list()
 
@@ -40,7 +40,12 @@ leaflet(clever_stops) %>%
 
   test_join <- st_join(clever_stops, broad_sf)
 
+trips$route_id %>%
+  table %>%
+  View()
 
+filter(stops, route_id == 11559) %>%
+  View()
 mapview(new_orleans[])
 nola_sf <- new_orleans %>% 
   gtfs_as_sf()
@@ -89,10 +94,12 @@ stop_times$stop_id %>% unique() %>% View()
 #Join everything to isolate the broad street stops
 nola =  select(routes, route_type, route_short_name,route_id) %>% 
   inner_join(select(trips, route_id, trip_id)) %>% 
-  inner_join(select(stop_times, trip_id, stop_id)) %>% 
+  inner_join(select(stop_times, trip_id, stop_id, stop_sequence, shape_dist_traveled)) %>% 
   select(-trip_id) %>% unique() %>% 
   inner_join(select(stops, stop_id, stop_name, lat=stop_lat, lon=stop_lon)) %>% 
   unique()
+
+
 
 broad_sf <- filter(nola, route_short_name == "94") %>%
   inner_join(stops_sf) %>%

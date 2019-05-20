@@ -6,8 +6,35 @@ library(chron)
 
 #temp = list.files(pattern="*")
 #myfiles = lapply(temp, read_xlsx)
-broad <- read_xlsx("data/RT94.xlsx")
 
+#Need to read in the actual stop IDs first, as the ones from the Clever are wrong for some reason
+stop_ids <- read_csv("data/clever_94_stops_tt_id.csv") %>%
+  mutate(stop.clever = `Travel Time ID` %>% as.numeric, #Create a join var. for the 
+         stop.gtfs = `Stop ID` %>% as.numeric) 
+
+broad <- read_xlsx("data/RT94.xlsx") %>%
+  mutate(stop.clever = STOP_ID %>% as.numeric()) %>%
+  left_join(select(stop_ids, stop.id, stop.gtfs))
+
+select(broad, STOP_ID, MAIN_CROSS_STREET) %>%
+  unique() %>%
+  View()
+
+broad %>%
+  select(SORT_ORDER, STOP_ID, MAIN_CROSS_STREET, DIRECTION_NAME) %>%
+  unique() %>%
+  View()
+  
+
+filter(broad, DIRECTION_NAME == "INBOUND") %>%
+  select(SORT_ORDER, STOP_ID, MAIN_CROSS_STREET) %>%
+  unique() %>%
+  write_csv("clever_stops_inbound.csv")
+
+filter(broad, DIRECTION_NAME == "OUTBOUND") %>%
+  select(SORT_ORDER, STOP_ID, MAIN_CROSS_STREET) %>%
+  unique() %>%
+  write_csv("clever_stops_outbound.csv")
 ##Clean up the time-stamp data (currently adds in a date due to it being done in excel); 
 #convert to a time object
 
@@ -35,7 +62,7 @@ tf <- function(x, y){
   # -PASSENGERS_ON
   # -PASSENGERS_OFF
   # -PASSENGERS_SPOT
-
+summary(broad)
 trial <- filter(broad, TIMEPOINT == 0) %>% #Filter out timepoints that are -1, as they are false
                                           #(there is some type of error in clever...)
   select(SERIAL_NUMBER, SORT_ORDER, SURVEY_DATE, SERVICE_PERIOD, TIME_PERIOD, TRIP_START_TIME,
