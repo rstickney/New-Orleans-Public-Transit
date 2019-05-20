@@ -20,6 +20,7 @@ library(leaflet)
 new_orleans <- read_gtfs("data//norta.zip", 
                          local = TRUE) 
 
+##Add in the geometries of other routes for the final map
 route_geom <- get_route_geometry(new_orleans)
 route_named <- route_geom %>%#st_set_geometry(route_geom, NULL)
   left_join(select(routes, route_short_name, route_long_name, route_id))
