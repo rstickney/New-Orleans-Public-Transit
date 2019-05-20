@@ -1,85 +1,85 @@
-Stop ID,Stop Name,Stop Sequence,Total Activity,Average Activity,Median Activity,Speed to Next Stop (Avg),Speed to Next Stop (Med),Distance to Next Stop,Distance Traveled
-2217,Alcee Fortier at Chef Highway,1,108,1.26,1,27.86,33.36,0.12,0
-2233,Chef at Dong Phuong,2,9,0.1,0,31.3,32.09,0.24,0.12
-2234,Chef Garden Apartments,3,0,0,0,35.61,36.92,0.37,0.36
-2235,Orleans East Apartments,4,1,0.01,0,38.96,37.21,0.09,0.73
-2236,Opposite Maison Orleans Two,5,0,0,0,24.14,24.96,0.18,0.82
-8075,Chef Highway at Michoud (Nearside),6,18,0.2,0,16.68,10.04,0.11,1
-4088,Chef Highway at Michoud (In),7,83,0.89,0,26.67,27.38,0.27,1.11
-4089,Chef Highway at 13001 Chef Highway,8,0,0,0,29.24,27.92,0.96,1.38
-1672,Chef Highway at Bullard (Farside),9,7,0.08,0,31.07,31.59,0.24,2.34
-1673,Chef Highway at Sherwood,10,20,0.22,0,33.21,34.06,0.24,2.58
-1674,Chef Highway at Wright Rd.,11,37,0.41,0,27.71,28.71,0.22,2.82
-1675,Chef Highway at Papania,12,66,0.73,0,34.33,36.34,0.16,3.04
-1676,Chef Highway at Good,13,1,0.01,0,28.81,28.96,0.09,3.2
-1677,Chef Highway at Schindler,14,31,0.34,0,32.71,33.89,0.13,3.29
-1678,Chef Highway at Cardenas,15,14,0.16,0,27.18,26.48,0.17,3.42
-1717,Chef Highway at Read,16,15,0.17,0,18.94,15.17,0.16,3.59
-1680,Chef Highway at Lurline,17,33,0.36,0,15.77,12.96,0.18,3.75
-1681,Chef Highway at Shopping Center,18,34,0.37,0,21.35,21.85,0.14,3.93
-1682,Chef Highway at Hickerson,19,12,0.13,0,24.43,24.96,0.18,4.07
-1683,Chef Highway at Bundy,20,55,0.6,0,27.28,27.37,0.13,4.25
-4028,Chef Highway at Cerise,21,41,0.45,0,25.75,25.8,0.2,4.38
-4609,Chef Highway at Arthur,22,5,0.05,0,28.58,28.15,0.05,4.58
-8399,Chef Highway at Lancelot,23,5,0.05,0,26.82,27.8,0.08,4.63
-1686,Chef Highway at Gawain,24,14,0.15,0,17.05,17.49,0.11,4.71
-4612,Chef Highway at Crowder,25,71,0.78,0,23.85,25.53,0.14,4.82
-1688,Chef Highway at Laine,26,24,0.26,0,25.79,26.9,0.12,4.96
-1689,Chef Highway at Eastview,27,20,0.22,0,25.46,29.95,0.06,5.08
-1690,Chef Highway at Elaine,28,39,0.43,0,21.35,23.39,0.11,5.14
-4090,Chef Highway at Light Standard 429,29,0,0,0,20.66,22.44,0.23,5.25
-1692,Chef Highway at Wilson,30,104,1.13,1,26.95,28.69,0.12,5.48
-1693,Chef Highway at Lonely Oak,31,20,0.22,0,24.45,24.66,0.14,5.6
-1694,Chef Highway at Plum Orchard,32,63,0.69,0,18.4,17.9,0.17,5.74
-1695,Chef Highway at Chantilly,33,24,0.26,0,14.23,15.54,0.09,5.91
-1696,Chef Highway Opposite Saint Paul's,34,15,0.16,0,13.61,12.41,0.16,6
-1697,Chef Highway at Dale,35,74,0.81,0,20.79,20.01,0.13,6.16
-1698,Chef Highway at Ray,36,4,0.04,0,22.12,24.77,0.2,6.29
-4116,Chef Highway at Majestic Oak,37,53,0.58,0,21.24,23.71,0.14,6.49
-2243,Chef Highway at Stemway,38,23,0.25,0,15.73,14.24,0.19,6.63
-2245,Chef Menteur Highway at Downman Rd.,39,453,4.92,4,19.9,18.67,0.89,6.82
-5140,Chef Menteur Highway at Congress Dr.,40,72,0.77,0,19.21,18.87,0.16,7.71
-7712,Chef Menteur Highway at Desire Drive,41,67,0.71,0,22.34,21.19,0.07,7.87
-2247,Chef Menteur Highway at Store Walkway,42,0,0,0,16.03,16.3,0.08,7.94
-1399,Chef Menteur Highway at Louisa St.,43,143,1.52,1,14.11,13.55,0.08,8.02
-2249,Chef Menteur Highway at Gentilly Walmart,44,174,1.85,1,23.83,24.59,0.15,8.1
-2250,Chef Menteur Highway at Press Dr.,45,45,0.48,0,23.7,25.8,0.17,8.25
-2251,Chef Menteur Highway at Seminary Pl.,46,18,0.19,0,23.45,23.78,0.11,8.42
-2252,Chef Menteur Highway at Providence Pl.,47,19,0.2,0,27.67,29.96,0.12,8.53
-2253,Gentilly Blvd. at Eastern St.,48,2,0.02,0,22.19,23.16,0.1,8.65
-2254,Gentilly Ave. at Lafaye St.,49,16,0.17,0,17.93,17.69,0.13,8.75
-2255,Gentilly Blvd. at Franklin Ave.,50,193,2.05,2,28.49,30.36,0.18,8.88
-2256,Gentilly Blvd. at Arts St.,51,25,0.27,0,31.29,32.51,0.1,9.06
-2257,Gentilly Blvd. at St. Roch St.,52,0,0,0,32.02,31.41,0.13,9.16
-2258,Gentilly Blvd. at Mandeville St.,53,7,0.08,0,28.94,29.14,0.1,9.29
-2259,Gentilly Blvd. at Marigny St.,54,7,0.08,0,17.33,17.42,0.08,9.39
-3575,Gentilly Blvd. at Elysian Fields Ave. (Nearside),55,128,1.38,1,24.02,19.2,0.07,9.47
-2159,Gentilly Blvd. at Elysian Fields Ave. (Farside),56,142,1.53,1,20.54,21.7,0.12,9.54
-4644,Gentilly Blvd. at Foy St.,57,56,0.6,0,20.11,16.26,0.06,9.66
-4645,Gentilly Blvd. at Norman Mayer Ave.,58,67,0.72,0,17.88,18.22,0.13,9.72
-4646,Gentilly Blvd. at Pauger St.,59,5,0.05,0,20.82,19.8,0.08,9.85
-2163,Gentilly Blvd. at St. Anthony St.,60,71,0.76,0,28.87,27.29,0.22,9.93
-2863,Gentilly Blvd. at New Orleans St.,61,16,0.17,0,14.36,15.85,0.05,10.15
-2261,"New Orleans St, at Pleasure St.",62,1,0.01,0,27.17,28.02,0.14,10.2
-2262,New Orleans St. at Benefit St.,63,19,0.21,0,20.98,20.19,0.26,10.34
-4651,N. Broad St. at Agriculture St.,64,89,0.97,0,25.53,26.96,0.18,10.6
-4652,N. Broad St. at Republic St.,65,37,0.4,0,16.95,17.06,0.13,10.78
-2351,N. Broad St. at St. Bernard Ave.,66,490,5.27,5,28.55,28.48,0.23,10.91
-4655,N. Broad St. at D'Abadie St.,67,75,0.81,0,25.96,26.17,0.14,11.14
-4656,N. Broad St. at Lapeyrouse St.,68,52,0.56,0,24.9,24.15,0.14,11.28
-4657,N. Broad St. at Columbus St.,69,38,0.41,0,19.1,15.65,0.14,11.42
-4658,N. Broad St. at Esplanade Ave.,70,220,2.39,2,21.1,21.21,0.19,11.56
-4659,N. Broad St. at Ursulines Ave.,71,65,0.71,0,23.31,22.61,0.15,11.75
-4660,N. Broad St. at Dumaine St.,72,88,0.95,0,18.83,18.78,0.11,11.9
-4661,N. Broad St. at Orleans Ave.,73,82,0.88,0,22.52,22.39,0.14,12.01
-4662,N. Broad St. at Lafitte St.,74,47,0.51,0,19.37,19.13,0.16,12.15
-4663,N. Broad St. at Bienville St.,75,64,0.69,0,18.89,17.6,0.15,12.31
-2276,N. Broad St. at Canal St.,76,1141,12.27,12,22.44,23.53,0.23,12.46
-4664,S. Broad Ave. at Banks St.,77,107,1.2,1,23.83,22.61,0.12,12.69
-4665,S. Broad Ave. at Tulane Ave.,78,550,6.18,6,20.51,19.11,0.4,12.81
-505,S. Broad Ave. at Overpass,79,19,0.22,0,33.83,33.59,0.31,13.21
-2280,S. Broad Ave. at Erato St.,80,56,0.64,0,26.42,24.27,0.04,13.52
-8074,S. Broad Ave. at ML King Ave.,81,0,0,0,23.47,23.6,0.2,13.56
-2282,S. Broad Ave. at Washington Ave.,82,505,5.67,5,7.39,6.74,0.16,13.76
-8303,Toledano St. at S. Dorgenois St.,83,132,1.55,1,19.27,15.91,0.1,13.92
-638,Washington Ave. at S.Broad St.,84,70,1.84,0,NA,NA,NA,14.02
+Direction,Stop ID,Stop Name,Stop Sequence,Total Activity,Average Activity,Median Activity,Speed to Next Stop (Avg),Speed to Next Stop (Med),Distance to Next Stop,Distance Traveled
+INBOUND,2217,Alcee Fortier at Chef Highway,1,108,1.26,1,27.86,33.36,0.12,0
+INBOUND,2233,Chef at Dong Phuong,2,9,0.1,0,31.3,32.09,0.24,0.12
+INBOUND,2234,Chef Garden Apartments,3,0,0,0,35.61,36.92,0.37,0.36
+INBOUND,2235,Orleans East Apartments,4,1,0.01,0,38.96,37.21,0.09,0.73
+INBOUND,2236,Opposite Maison Orleans Two,5,0,0,0,24.14,24.96,0.18,0.82
+INBOUND,8075,Chef Highway at Michoud (Nearside),6,18,0.2,0,16.68,10.04,0.11,1
+INBOUND,4088,Chef Highway at Michoud (In),7,83,0.89,0,26.67,27.38,0.27,1.11
+INBOUND,4089,Chef Highway at 13001 Chef Highway,8,0,0,0,29.24,27.92,0.96,1.38
+INBOUND,1672,Chef Highway at Bullard (Farside),9,7,0.08,0,31.07,31.59,0.24,2.34
+INBOUND,1673,Chef Highway at Sherwood,10,20,0.22,0,33.21,34.06,0.24,2.58
+INBOUND,1674,Chef Highway at Wright Rd.,11,37,0.41,0,27.71,28.71,0.22,2.82
+INBOUND,1675,Chef Highway at Papania,12,66,0.73,0,34.33,36.34,0.16,3.04
+INBOUND,1676,Chef Highway at Good,13,1,0.01,0,28.81,28.96,0.09,3.2
+INBOUND,1677,Chef Highway at Schindler,14,31,0.34,0,32.71,33.89,0.13,3.29
+INBOUND,1678,Chef Highway at Cardenas,15,14,0.16,0,27.18,26.48,0.17,3.42
+INBOUND,1717,Chef Highway at Read,16,15,0.17,0,18.94,15.17,0.16,3.59
+INBOUND,1680,Chef Highway at Lurline,17,33,0.36,0,15.77,12.96,0.18,3.75
+INBOUND,1681,Chef Highway at Shopping Center,18,34,0.37,0,21.35,21.85,0.14,3.93
+INBOUND,1682,Chef Highway at Hickerson,19,12,0.13,0,24.43,24.96,0.18,4.07
+INBOUND,1683,Chef Highway at Bundy,20,55,0.6,0,27.28,27.37,0.13,4.25
+INBOUND,4028,Chef Highway at Cerise,21,41,0.45,0,25.75,25.8,0.2,4.38
+INBOUND,4609,Chef Highway at Arthur,22,5,0.05,0,28.58,28.15,0.05,4.58
+INBOUND,8399,Chef Highway at Lancelot,23,5,0.05,0,26.82,27.8,0.08,4.63
+INBOUND,1686,Chef Highway at Gawain,24,14,0.15,0,17.05,17.49,0.11,4.71
+INBOUND,4612,Chef Highway at Crowder,25,71,0.78,0,23.85,25.53,0.14,4.82
+INBOUND,1688,Chef Highway at Laine,26,24,0.26,0,25.79,26.9,0.12,4.96
+INBOUND,1689,Chef Highway at Eastview,27,20,0.22,0,25.46,29.95,0.06,5.08
+INBOUND,1690,Chef Highway at Elaine,28,39,0.43,0,21.35,23.39,0.11,5.14
+INBOUND,4090,Chef Highway at Light Standard 429,29,0,0,0,20.66,22.44,0.23,5.25
+INBOUND,1692,Chef Highway at Wilson,30,104,1.13,1,26.95,28.69,0.12,5.48
+INBOUND,1693,Chef Highway at Lonely Oak,31,20,0.22,0,24.45,24.66,0.14,5.6
+INBOUND,1694,Chef Highway at Plum Orchard,32,63,0.69,0,18.4,17.9,0.17,5.74
+INBOUND,1695,Chef Highway at Chantilly,33,24,0.26,0,14.23,15.54,0.09,5.91
+INBOUND,1696,Chef Highway Opposite Saint Paul's,34,15,0.16,0,13.61,12.41,0.16,6
+INBOUND,1697,Chef Highway at Dale,35,74,0.81,0,20.79,20.01,0.13,6.16
+INBOUND,1698,Chef Highway at Ray,36,4,0.04,0,22.12,24.77,0.2,6.29
+INBOUND,4116,Chef Highway at Majestic Oak,37,53,0.58,0,21.24,23.71,0.14,6.49
+INBOUND,2243,Chef Highway at Stemway,38,23,0.25,0,15.73,14.24,0.19,6.63
+INBOUND,2245,Chef Menteur Highway at Downman Rd.,39,453,4.92,4,19.9,18.67,0.89,6.82
+INBOUND,5140,Chef Menteur Highway at Congress Dr.,40,72,0.77,0,19.21,18.87,0.16,7.71
+INBOUND,7712,Chef Menteur Highway at Desire Drive,41,67,0.71,0,22.34,21.19,0.07,7.87
+INBOUND,2247,Chef Menteur Highway at Store Walkway,42,0,0,0,16.03,16.3,0.08,7.94
+INBOUND,1399,Chef Menteur Highway at Louisa St.,43,143,1.52,1,14.11,13.55,0.08,8.02
+INBOUND,2249,Chef Menteur Highway at Gentilly Walmart,44,174,1.85,1,23.83,24.59,0.15,8.1
+INBOUND,2250,Chef Menteur Highway at Press Dr.,45,45,0.48,0,23.7,25.8,0.17,8.25
+INBOUND,2251,Chef Menteur Highway at Seminary Pl.,46,18,0.19,0,23.45,23.78,0.11,8.42
+INBOUND,2252,Chef Menteur Highway at Providence Pl.,47,19,0.2,0,27.67,29.96,0.12,8.53
+INBOUND,2253,Gentilly Blvd. at Eastern St.,48,2,0.02,0,22.19,23.16,0.1,8.65
+INBOUND,2254,Gentilly Ave. at Lafaye St.,49,16,0.17,0,17.93,17.69,0.13,8.75
+INBOUND,2255,Gentilly Blvd. at Franklin Ave.,50,193,2.05,2,28.49,30.36,0.18,8.88
+INBOUND,2256,Gentilly Blvd. at Arts St.,51,25,0.27,0,31.29,32.51,0.1,9.06
+INBOUND,2257,Gentilly Blvd. at St. Roch St.,52,0,0,0,32.02,31.41,0.13,9.16
+INBOUND,2258,Gentilly Blvd. at Mandeville St.,53,7,0.08,0,28.94,29.14,0.1,9.29
+INBOUND,2259,Gentilly Blvd. at Marigny St.,54,7,0.08,0,17.33,17.42,0.08,9.39
+INBOUND,3575,Gentilly Blvd. at Elysian Fields Ave. (Nearside),55,128,1.38,1,24.02,19.2,0.07,9.47
+INBOUND,2159,Gentilly Blvd. at Elysian Fields Ave. (Farside),56,142,1.53,1,20.54,21.7,0.12,9.54
+INBOUND,4644,Gentilly Blvd. at Foy St.,57,56,0.6,0,20.11,16.26,0.06,9.66
+INBOUND,4645,Gentilly Blvd. at Norman Mayer Ave.,58,67,0.72,0,17.88,18.22,0.13,9.72
+INBOUND,4646,Gentilly Blvd. at Pauger St.,59,5,0.05,0,20.82,19.8,0.08,9.85
+INBOUND,2163,Gentilly Blvd. at St. Anthony St.,60,71,0.76,0,28.87,27.29,0.22,9.93
+INBOUND,2863,Gentilly Blvd. at New Orleans St.,61,16,0.17,0,14.36,15.85,0.05,10.15
+INBOUND,2261,"New Orleans St, at Pleasure St.",62,1,0.01,0,27.17,28.02,0.14,10.2
+INBOUND,2262,New Orleans St. at Benefit St.,63,19,0.21,0,20.98,20.19,0.26,10.34
+INBOUND,4651,N. Broad St. at Agriculture St.,64,89,0.97,0,25.53,26.96,0.18,10.6
+INBOUND,4652,N. Broad St. at Republic St.,65,37,0.4,0,16.95,17.06,0.13,10.78
+INBOUND,2351,N. Broad St. at St. Bernard Ave.,66,490,5.27,5,28.55,28.48,0.23,10.91
+INBOUND,4655,N. Broad St. at D'Abadie St.,67,75,0.81,0,25.96,26.17,0.14,11.14
+INBOUND,4656,N. Broad St. at Lapeyrouse St.,68,52,0.56,0,24.9,24.15,0.14,11.28
+INBOUND,4657,N. Broad St. at Columbus St.,69,38,0.41,0,19.1,15.65,0.14,11.42
+INBOUND,4658,N. Broad St. at Esplanade Ave.,70,220,2.39,2,21.1,21.21,0.19,11.56
+INBOUND,4659,N. Broad St. at Ursulines Ave.,71,65,0.71,0,23.31,22.61,0.15,11.75
+INBOUND,4660,N. Broad St. at Dumaine St.,72,88,0.95,0,18.83,18.78,0.11,11.9
+INBOUND,4661,N. Broad St. at Orleans Ave.,73,82,0.88,0,22.52,22.39,0.14,12.01
+INBOUND,4662,N. Broad St. at Lafitte St.,74,47,0.51,0,19.37,19.13,0.16,12.15
+INBOUND,4663,N. Broad St. at Bienville St.,75,64,0.69,0,18.89,17.6,0.15,12.31
+INBOUND,2276,N. Broad St. at Canal St.,76,1141,12.27,12,22.44,23.53,0.23,12.46
+INBOUND,4664,S. Broad Ave. at Banks St.,77,107,1.2,1,23.83,22.61,0.12,12.69
+INBOUND,4665,S. Broad Ave. at Tulane Ave.,78,550,6.18,6,20.51,19.11,0.4,12.81
+INBOUND,505,S. Broad Ave. at Overpass,79,19,0.22,0,33.83,33.59,0.31,13.21
+INBOUND,2280,S. Broad Ave. at Erato St.,80,56,0.64,0,26.42,24.27,0.04,13.52
+INBOUND,8074,S. Broad Ave. at ML King Ave.,81,0,0,0,23.47,23.6,0.2,13.56
+INBOUND,2282,S. Broad Ave. at Washington Ave.,82,505,5.67,5,7.39,6.74,0.16,13.76
+INBOUND,8303,Toledano St. at S. Dorgenois St.,83,132,1.55,1,19.27,15.91,0.1,13.92
+INBOUND,638,Washington Ave. at S.Broad St.,84,70,1.84,0,NA,NA,NA,14.02
