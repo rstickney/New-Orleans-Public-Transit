@@ -87,35 +87,57 @@ trial_pm_test_join <- trial %>%
 
 ####Grouping the results
 #Using medians and averages as there a number of outliers 
-am_agg <- ungroup(trial_am_test_join) %>%
-  select(stop_sequence, shape_dist_traveled, stop.gtfs, stop_name, PASSENGERS_ON, PASSENGERS_OFF, activity, speed) %>%
+am_act <- ungroup(trial_am_test_join) %>%
+  select(stop_sequence, shape_dist_traveled, stop.gtfs, stop_name, PASSENGERS_ON, PASSENGERS_OFF, activity) %>%
   group_by(stop_sequence, stop.gtfs, shape_dist_traveled, stop_name) %>%
   summarise(`Total Activity` = sum(activity, na.rm = TRUE),
             `Median Activity` = median(activity, na.rm = TRUE),
-            `Average Activity` = mean(activity, na.rm = TRUE) %>% round(2),
+            `Average Activity` = mean(activity, na.rm = TRUE) %>% round(2)) %>%
+  ungroup()
+  
+am_agg <-  ungroup(trial_am_test_join) %>%
+  select(stop.gtfs, PASSENGERS_ON, PASSENGERS_OFF, speed) %>%
+  filter(speed > 0 & speed < 60) %>%
+  group_by(stop.gtfs) %>%
+  summarise(
             `Speed to Next Stop (Med)` = median(speed, na.rm = TRUE) %>% round(2),
             `Speed to Next Stop (Avg)` = mean(speed, na.rm = TRUE) %>% round(2)) %>%
   ungroup() %>%
+  right_join(am_act) %>%
   mutate(shape_dist_traveled = (shape_dist_traveled *0.621371) %>% round(2),
          `Distance to Next Stop` = lead(shape_dist_traveled) - shape_dist_traveled) %>%
   select(`Stop ID` = stop.gtfs, `Stop Name`= stop_name, `Stop Sequence` = stop_sequence, `Total Activity`,
-         `Median Activity`, `Average Activity`, `Speed to Next Stop (Avg)`, `Speed to Next Stop (Med)`,
+         `Average Activity`, `Median Activity`, `Speed to Next Stop (Avg)`, `Speed to Next Stop (Med)`,
          `Distance to Next Stop`, `Distance Traveled` = shape_dist_traveled)
 
-pm_agg <- ungroup(trial_pm_test_join) %>%
-  select(stop_sequence, shape_dist_traveled, stop.gtfs, stop_name, PASSENGERS_ON, PASSENGERS_OFF, activity, speed) %>%
+pm_act <- ungroup(trial_pm_test_join) %>%
+  select(stop_sequence, shape_dist_traveled, stop.gtfs, stop_name, PASSENGERS_ON, PASSENGERS_OFF, activity) %>%
   group_by(stop_sequence, stop.gtfs, shape_dist_traveled, stop_name) %>%
   summarise(`Total Activity` = sum(activity, na.rm = TRUE),
             `Median Activity` = median(activity, na.rm = TRUE),
-            `Average Activity` = mean(activity, na.rm = TRUE) %>% round(2),
-            `Speed to Next Stop (Med)` = median(speed, na.rm = TRUE) %>% round(2),
-            `Speed to Next Stop (Avg)` = mean(speed, na.rm = TRUE) %>% round(2)) %>%
+            `Average Activity` = mean(activity, na.rm = TRUE) %>% round(2)) %>%
+  ungroup()
+
+pm_agg <-  ungroup(trial_pm_test_join) %>%
+  select(stop.gtfs, PASSENGERS_ON, PASSENGERS_OFF, speed) %>%
+  filter(speed > 0 & speed < 60) %>%
+  group_by(stop.gtfs) %>%
+  summarise(
+    `Speed to Next Stop (Med)` = median(speed, na.rm = TRUE) %>% round(2),
+    `Speed to Next Stop (Avg)` = mean(speed, na.rm = TRUE) %>% round(2)) %>%
   ungroup() %>%
+  right_join(pm_act) %>%
   mutate(shape_dist_traveled = (shape_dist_traveled *0.621371) %>% round(2),
          `Distance to Next Stop` = lead(shape_dist_traveled) - shape_dist_traveled) %>%
   select(`Stop ID` = stop.gtfs, `Stop Name`= stop_name, `Stop Sequence` = stop_sequence, `Total Activity`,
-         `Median Activity`, `Average Activity`, `Speed to Next Stop (Avg)`, `Speed to Next Stop (Med)`,
+         `Average Activity`, `Median Activity`, `Speed to Next Stop (Avg)`, `Speed to Next Stop (Med)`,
          `Distance to Next Stop`, `Distance Traveled` = shape_dist_traveled)
+
+filt_pm <- sum(pm_agg$`Total Activity`)
+filt_am <- sum(am_agg$`Total Activity`)
+
+filt_am/6816
+filt_pm/7124
 
 write_csv(am_agg, "Weekday Peak AM Summary Stats.csv")
 write_csv(pm_agg, "Weekday Peak PM Summary Stats.csv")
